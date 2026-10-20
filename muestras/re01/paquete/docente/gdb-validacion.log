@@ -1,0 +1,46 @@
+Breakpoint 1 at 0x1942: file ./re01.c, line 88.
+
+Breakpoint 1, transform_record (cfg=cfg@entry=0x7fff116c80e0, record=record@entry=0x7fff116c8100, output=output@entry=0x7fff116c8190 "\020") at ./re01.c:88
+$1 = 32
+$2 = 1
+process 272769
+Mapped address spaces:
+
+          Start Addr           End Addr       Size     Offset  Perms  objfile
+      0x57648466c000     0x57648466d000     0x1000        0x0  r--p   /home/hunter/projects/ingenieriaInversa/muestras/re01/paquete/alumnado/RE-01
+      0x57648466d000     0x57648466e000     0x1000     0x1000  r-xp   /home/hunter/projects/ingenieriaInversa/muestras/re01/paquete/alumnado/RE-01
+      0x57648466e000     0x57648466f000     0x1000     0x2000  r--p   /home/hunter/projects/ingenieriaInversa/muestras/re01/paquete/alumnado/RE-01
+      0x57648466f000     0x576484670000     0x1000     0x2000  r--p   /home/hunter/projects/ingenieriaInversa/muestras/re01/paquete/alumnado/RE-01
+      0x576484670000     0x576484671000     0x1000     0x3000  rw-p   /home/hunter/projects/ingenieriaInversa/muestras/re01/paquete/alumnado/RE-01
+      0x57648e39c000     0x57648e3bd000    0x21000        0x0  rw-p   [heap]
+      0x71bc90e00000     0x71bc90e28000    0x28000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libc.so.6
+      0x71bc90e28000     0x71bc90fb1000   0x189000    0x28000  r-xp   /usr/lib/x86_64-linux-gnu/libc.so.6
+      0x71bc90fb1000     0x71bc91000000    0x4f000   0x1b1000  r--p   /usr/lib/x86_64-linux-gnu/libc.so.6
+      0x71bc91000000     0x71bc91004000     0x4000   0x1ff000  r--p   /usr/lib/x86_64-linux-gnu/libc.so.6
+      0x71bc91004000     0x71bc91006000     0x2000   0x203000  rw-p   /usr/lib/x86_64-linux-gnu/libc.so.6
+      0x71bc91006000     0x71bc91013000     0xd000        0x0  rw-p   
+      0x71bc910f0000     0x71bc910f3000     0x3000        0x0  rw-p   
+      0x71bc91110000     0x71bc91112000     0x2000        0x0  rw-p   
+      0x71bc91112000     0x71bc91116000     0x4000        0x0  r--p   [vvar]
+      0x71bc91116000     0x71bc91118000     0x2000        0x0  r--p   [vvar_vclock]
+      0x71bc91118000     0x71bc9111a000     0x2000        0x0  r-xp   [vdso]
+      0x71bc9111a000     0x71bc9111b000     0x1000        0x0  r--p   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      0x71bc9111b000     0x71bc91146000    0x2b000     0x1000  r-xp   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      0x71bc91146000     0x71bc91150000     0xa000    0x2c000  r--p   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      0x71bc91150000     0x71bc91152000     0x2000    0x36000  r--p   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      0x71bc91152000     0x71bc91154000     0x2000    0x38000  rw-p   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      0x7fff116a8000     0x7fff116ca000    0x22000        0x0  rw-p   [stack]
+  0xffffffffff600000 0xffffffffff601000     0x1000        0x0  --xp   [vsyscall]
+MAIN_RUNTIME=0x57648466da70
+$3 = 32
+$4 = 140
+main (argc=<optimized out>, argv=0x7fff116c8378) at ./re01.c:143
+143	in ./re01.c
+Value returned is $5 = 3289118412
+eax            0xc40bf6cc          -1005848884
+OK id=1042 bytes=1 checksum=c40bf6cc
+[Inferior 1 (process 272769) exited normally]
+warning: Probes-based dynamic linker interface failed.
+Reverting to original interface.
+warning: 88	./re01.c: No such file or directory
+RE01 status=0 stage=done

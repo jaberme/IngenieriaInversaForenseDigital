@@ -1,0 +1,686 @@
+{
+  "sha256": "65236d15de045be83091934cb5c1f74aebf7d2ecd176b344743d51565ef2b29f",
+  "pruebas": [
+    {
+      "id": "T1-valida",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=17 checksum=d8d9f468\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=HTXLSR DOID 2026.\nchecksum=d8d9f468\n"
+    },
+    {
+      "id": "T2-vacio",
+      "retorno": 5,
+      "stdout": "",
+      "stderr": "RE01 status=5 stage=document\n",
+      "salida": null
+    },
+    {
+      "id": "T3-limite-inclusivo",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=16 checksum=84929ef5\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=DEFGHIJKLMNOPQRS\nchecksum=84929ef5\n"
+    },
+    {
+      "id": "T4-exceso",
+      "retorno": 6,
+      "stdout": "",
+      "stderr": "RE01 status=6 stage=limit\n",
+      "salida": null
+    },
+    {
+      "id": "T5-opcion-fuera-rango",
+      "retorno": 4,
+      "stdout": "",
+      "stderr": "RE01 status=4 stage=config\n",
+      "salida": null
+    },
+    {
+      "id": "config-modo",
+      "retorno": 4,
+      "stdout": "",
+      "stderr": "RE01 status=4 stage=config\n",
+      "salida": null
+    },
+    {
+      "id": "config-limite0",
+      "retorno": 4,
+      "stdout": "",
+      "stderr": "RE01 status=4 stage=config\n",
+      "salida": null
+    },
+    {
+      "id": "config-limite129",
+      "retorno": 4,
+      "stdout": "",
+      "stderr": "RE01 status=4 stage=config\n",
+      "salida": null
+    },
+    {
+      "id": "config-negativo",
+      "retorno": 4,
+      "stdout": "",
+      "stderr": "RE01 status=4 stage=config\n",
+      "salida": null
+    },
+    {
+      "id": "config-tag17",
+      "retorno": 4,
+      "stdout": "",
+      "stderr": "RE01 status=4 stage=config\n",
+      "salida": null
+    },
+    {
+      "id": "config-tag-vacio",
+      "retorno": 4,
+      "stdout": "",
+      "stderr": "RE01 status=4 stage=config\n",
+      "salida": null
+    },
+    {
+      "id": "config-extra",
+      "retorno": 4,
+      "stdout": "",
+      "stderr": "RE01 status=4 stage=config\n",
+      "salida": null
+    },
+    {
+      "id": "config-crlf",
+      "retorno": 4,
+      "stdout": "",
+      "stderr": "RE01 status=4 stage=config\n",
+      "salida": null
+    },
+    {
+      "id": "config-nul",
+      "retorno": 4,
+      "stdout": "",
+      "stderr": "RE01 status=4 stage=config\n",
+      "salida": null
+    },
+    {
+      "id": "config-largo",
+      "retorno": 4,
+      "stdout": "",
+      "stderr": "RE01 status=4 stage=config\n",
+      "salida": null
+    },
+    {
+      "id": "config-sin-lf",
+      "retorno": 4,
+      "stdout": "",
+      "stderr": "RE01 status=4 stage=config\n",
+      "salida": null
+    },
+    {
+      "id": "config-duplicada",
+      "retorno": 4,
+      "stdout": "",
+      "stderr": "RE01 status=4 stage=config\n",
+      "salida": null
+    },
+    {
+      "id": "config-orden",
+      "retorno": 4,
+      "stdout": "",
+      "stderr": "RE01 status=4 stage=config\n",
+      "salida": null
+    },
+    {
+      "id": "documento-texto-vacio",
+      "retorno": 5,
+      "stdout": "",
+      "stderr": "RE01 status=5 stage=document\n",
+      "salida": null
+    },
+    {
+      "id": "documento-texto129",
+      "retorno": 5,
+      "stdout": "",
+      "stderr": "RE01 status=5 stage=document\n",
+      "salida": null
+    },
+    {
+      "id": "documento-id0",
+      "retorno": 5,
+      "stdout": "",
+      "stderr": "RE01 status=5 stage=document\n",
+      "salida": null
+    },
+    {
+      "id": "documento-id7",
+      "retorno": 5,
+      "stdout": "",
+      "stderr": "RE01 status=5 stage=document\n",
+      "salida": null
+    },
+    {
+      "id": "documento-extra",
+      "retorno": 5,
+      "stdout": "",
+      "stderr": "RE01 status=5 stage=document\n",
+      "salida": null
+    },
+    {
+      "id": "documento-nul",
+      "retorno": 5,
+      "stdout": "",
+      "stderr": "RE01 status=5 stage=document\n",
+      "salida": null
+    },
+    {
+      "id": "documento-largo",
+      "retorno": 5,
+      "stdout": "",
+      "stderr": "RE01 status=5 stage=document\n",
+      "salida": null
+    },
+    {
+      "id": "documento-sin-lf",
+      "retorno": 5,
+      "stdout": "",
+      "stderr": "RE01 status=5 stage=document\n",
+      "salida": null
+    },
+    {
+      "id": "documento-control",
+      "retorno": 5,
+      "stdout": "",
+      "stderr": "RE01 status=5 stage=document\n",
+      "salida": null
+    },
+    {
+      "id": "documento-utf8",
+      "retorno": 5,
+      "stdout": "",
+      "stderr": "RE01 status=5 stage=document\n",
+      "salida": null
+    },
+    {
+      "id": "config-ausente",
+      "retorno": 3,
+      "stdout": "",
+      "stderr": "RE01 status=3 stage=config\n",
+      "salida": null
+    },
+    {
+      "id": "documento-ausente",
+      "retorno": 3,
+      "stdout": "",
+      "stderr": "RE01 status=3 stage=document\n",
+      "salida": null
+    },
+    {
+      "id": "salida-existente",
+      "retorno": 7,
+      "stdout": "",
+      "stderr": "RE01 status=7 stage=write\n",
+      "salida": "NO MODIFICAR\n"
+    },
+    {
+      "id": "minimos",
+      "retorno": 0,
+      "stdout": "OK id=1 bytes=1 checksum=df0c214d\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=X\nid=1\ntext=Z\nchecksum=df0c214d\n"
+    },
+    {
+      "id": "maximos",
+      "retorno": 0,
+      "stdout": "OK id=999999 bytes=128 checksum=466ed045\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=aaaaaaaaaaaaaaaa\nid=999999\ntext=YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY\nchecksum=466ed045\n"
+    },
+    {
+      "id": "oraculo-0",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=64 checksum=58df8efd\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=2d'aw^iv5]\\5yg5~`^t\"(d@m{a\\s;::p-2#yfvhu,6byl#%wofre9/:#qq9&`:cn\nchecksum=58df8efd\n"
+    },
+    {
+      "id": "oraculo-1",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=73 checksum=6809f484\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=689g<{?4%]4<k-lgwh~kvoaynys\\o?w}<4lrz8_9!6^q)a?dt]i}#4 d`|b'p}8<,`*>kregw\nchecksum=6809f484\n"
+    },
+    {
+      "id": "oraculo-2",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=85 checksum=5be06fd2\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=@DE(Q4K3$C@E;6(XYQHIYHNV=TEKO^[HRV?B.NEV</L>YV{8XHN_P/D/SLXCC\\X@U25|QNZ!.R7PL!)\\4Z_II\nchecksum=5be06fd2\n"
+    },
+    {
+      "id": "oraculo-3",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=22 checksum=213e3deb\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=+\";X\"^84UH,M!%K\\:O[V?N\nchecksum=213e3deb\n"
+    },
+    {
+      "id": "oraculo-4",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=106 checksum=596abaa2\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=%z3]aenua{7j_m0[pw$#7g#-ds>gg)b[6tq;k_^9+n,^g0 4g|7gzxvgwmp$$9;xld`pq8htfof^&hjv'u'panqc@yb rzkk-)?1$(qq/k\nchecksum=596abaa2\n"
+    },
+    {
+      "id": "oraculo-5",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=79 checksum=fc9a558e\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=:aq^rt.`gan45fvb=p^6sevx1+8ujb[qk{@8vuyd`nht0/^`z>qhslvu**t\"hg@j.es4x@4i#hqj][,\nchecksum=fc9a558e\n"
+    },
+    {
+      "id": "oraculo-6",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=10 checksum=4da06e09\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=e,0pwak[2_\nchecksum=4da06e09\n"
+    },
+    {
+      "id": "oraculo-7",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=24 checksum=80f8dd08\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=RB&<[V]YA1IYQASILH=S}CQ)\nchecksum=80f8dd08\n"
+    },
+    {
+      "id": "oraculo-8",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=88 checksum=b93e3a95\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=Z4FQSGDUV76J2H#9TNSNAUZ3[R-.UJ J~9NN+A-]F /A{^!K5'+\"O?=C.NCRNG-(NB5*)O<]AFJ'IS6LD=KXC$SX\nchecksum=b93e3a95\n"
+    },
+    {
+      "id": "oraculo-9",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=117 checksum=d3f7cdaa\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=BK]D=B.K9 XOILI@F\"F3H8.B&2KA')TQLEUM1)^EI[N)M6>P(FW-M.:,40J^.H4>P/Q%A'SY:T; CLTY,\"QV!E\"J:-P[FFA+&2OHIO4M;WBFBO\"<YASMH\nchecksum=d3f7cdaa\n"
+    },
+    {
+      "id": "oraculo-10",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=63 checksum=7c0fd0e0\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=G^S%RUZOL[,HQEV7GKHLESKV~<F/2GMOSTH%ETASV6BJG*%BNJU.\"LJA;F'\"-[D\nchecksum=7c0fd0e0\n"
+    },
+    {
+      "id": "oraculo-11",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=92 checksum=9da584d4\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=6FND5I4FM0]BM]L8}RWZPM>CZ?#4L#_UO]T[E#RSC-PV/\\ V|8PYUY.U#+W_^.17JYXNQU[,Z/MC3F8C7CK`I/9.F;ZA\nchecksum=9da584d4\n"
+    },
+    {
+      "id": "oraculo-12",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=83 checksum=bce96936\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=cv78n >?t/kg;u(me/e?jr+g@w-hw+$n2q)]s6%t!,sr)d$dg)el}`<:om\\k3nwu-z49speou!#kdxr=b$f\nchecksum=bce96936\n"
+    },
+    {
+      "id": "oraculo-13",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=52 checksum=1832363a\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=/\\0vol{l6=;$f@n]ucm*fw39gyk>_)$&(}t+($dvhm'ixd}fn*]o\nchecksum=1832363a\n"
+    },
+    {
+      "id": "oraculo-14",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=113 checksum=e71c9c41\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=]\"N@Z\"W!E'BF?L{QHY&^B\"U(*X$%,P<Y]}I&W}H.PF-^*\\-: @G. J1WJK#.P*`MUY-D,1_OOV!IF.FSBCZNN]MAW3/TFT}<G_.&SKM}W<7.::VJC\nchecksum=e71c9c41\n"
+    },
+    {
+      "id": "oraculo-15",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=18 checksum=3fa99344\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=ay`^n9-'y]>flc*u7s\nchecksum=3fa99344\n"
+    },
+    {
+      "id": "oraculo-16",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=104 checksum=fcecf836\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=TZS10/N3%@KULRK`N|=NO%ZF0TPQ{;O?C%8ZSJ[KG%CP!#ZS(U_A<6T9<S~J4HR/W=TPF>AZH\"A?>0{C6Q`*>LMDG)O=-`V,}OMS@:|D\nchecksum=fcecf836\n"
+    },
+    {
+      "id": "oraculo-17",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=128 checksum=d3514de8\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=&let!]f1\"%poi-zw1tn3{sp^zt$t/o~#.m6ywqz(po-[;w]d(\"ptst$%?{ n#ckc)?^b<mjl]sb)<22[4]z?k]:gebuxxocf=lq.jv.:6}5'4\"]q9n5b@(t}z1^b,h>h\nchecksum=d3514de8\n"
+    },
+    {
+      "id": "oraculo-18",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=89 checksum=2ec64d3f\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=o\\ex-++9nc4#nt#pna0rtmuilq{bbyf]xdqx`r{al%q|_?24tqj_a\\{i~}zu3ntfp6o/cnse\"jp}\"ilpg&,n)sc]\"\nchecksum=2ec64d3f\n"
+    },
+    {
+      "id": "oraculo-19",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=110 checksum=aeddd656\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=i(g.x56ywqtsp+48us$a4&]k6?km;>oz&9thq,l26narz`dui\\'tyai8=|;:;e)`owtam]-a(p.#yhsr|j6;-%sl[j_lko=e/t2ng,!p'nww&9\nchecksum=aeddd656\n"
+    },
+    {
+      "id": "oraculo-20",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=72 checksum=a41b1c2a\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=|eg/z=ee\\ghq3-s~4a[*$7fb=0&qlqo:(gtk#<wl3i<o}9t1yi(s@!\" x~mp<\\278np,zo(8\nchecksum=a41b1c2a\n"
+    },
+    {
+      "id": "oraculo-21",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=9 checksum=1ecfe743\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext={8I9FOA.I\nchecksum=1ecfe743\n"
+    },
+    {
+      "id": "oraculo-22",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=45 checksum=251901a1\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=BHCW{OJT-+Z>H4KYTR%(C8R\",X&X>C8}RL!/XY__;11HZ\nchecksum=251901a1\n"
+    },
+    {
+      "id": "oraculo-23",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=12 checksum=49944ee3\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=mya)l@t.\"aru\nchecksum=49944ee3\n"
+    },
+    {
+      "id": "oraculo-24",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=78 checksum=ac40909d\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=~UL&XS(OHU3Y>\"Z#ZB\\G\\_]JFBL%DFTIIYT)SA[,>DOY;BW]2'AA0THNM].>XU$3C'C3|B[SRHZ2JT\nchecksum=ac40909d\n"
+    },
+    {
+      "id": "oraculo-25",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=11 checksum=e35ec8b7\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=UX]_SG8F0TQ\nchecksum=e35ec8b7\n"
+    },
+    {
+      "id": "oraculo-26",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=8 checksum=e0035861\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=[kcgqpil\nchecksum=e0035861\n"
+    },
+    {
+      "id": "oraculo-27",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=36 checksum=83121c1c\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=l}['7a~@6notmfh]\",vd3ibwz>q\\ */x\\\\{[\nchecksum=83121c1c\n"
+    },
+    {
+      "id": "oraculo-28",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=103 checksum=72a27399\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=BB\\2Z'C9UH;N)+T PN'%+4:N^@;{IR\\WLSB]=XU{)OK<4!9(_~D3O+GJ OQ]HAEH=\\VD^'-DRCM<S>\\_MRZR)J_O*4\"+{K~OF,GL:|$\nchecksum=72a27399\n"
+    },
+    {
+      "id": "oraculo-29",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=53 checksum=9f58866d\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=4z,`wg$y<glr8dq`!vnx:%llg!mc^s*8ab@s,orhf~_kk@fq+to7z\nchecksum=9f58866d\n"
+    },
+    {
+      "id": "oraculo-30",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=38 checksum=ac1750dc\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=P0.EYZN&*F73>)L~ LOT#<#}WT?@4Q\"TF}GF@-\nchecksum=ac1750dc\n"
+    },
+    {
+      "id": "oraculo-31",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=124 checksum=c6a5391f\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=o&n\"\"jcc3} ,laxr1bdo(v7.g3/aelh>@nzi;[k8=av~1bv&y}7uj_7j%mn+uisgkhc>]g+`7vc22vbdn[f f{``xrth|<+sij7^(nfz,ss}{we][ik2+rym#/x^\nchecksum=c6a5391f\n"
+    },
+    {
+      "id": "oraculo-32",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=125 checksum=26e50a3e\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=\\SML^#LZ5}F@FKHX}7.}ZZJNEKEX+A2C&MNA\\_DL~*XVWKI&I?|EO}X3O2WKC\\X-HH|HAZ]ADLL1XC&*EIZGUEBT&S{TDI6:%GH*SHUN-WRSB.?'R6P_A! QU9)Y+\nchecksum=26e50a3e\n"
+    },
+    {
+      "id": "oraculo-33",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=114 checksum=1c584b17\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=<w{f5-sxufj8|t-5kp<3ems5ewk-5{w`_mu5/(qk)u}k;z@3\"ruq;=q|ldg =+&\\9>*~ d?9~q%:6-toj)'-2<%ti`?i}ni9dpj{.of_q]g`fo\"wf+\nchecksum=1c584b17\n"
+    },
+    {
+      "id": "oraculo-34",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=74 checksum=a6bb7312\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=w0la(3\"nznf)t}r(sxl=z?t,!y<|<z'!h2!498*{ewetrg:(yj*f{9][uwittnf+_e#0a&sj#;\nchecksum=a6bb7312\n"
+    },
+    {
+      "id": "oraculo-35",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=104 checksum=37bb4ced\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=e3sbow%;3fz/u<!.qeg-swbvm!?%[fbyfh?bli_/:wonk @a.#6)dno\\zyhb8>k6ikzsqqe8d:0{:;clj;kd92yv0e>\\apvo,c>`)ivg\nchecksum=37bb4ced\n"
+    },
+    {
+      "id": "oraculo-36",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=77 checksum=66451f49\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=1;{@QYKE)`0G>TWU0|#A)5JP$_?LPRVR@GZKU--NZRZT9M20BSICRA[R[~)LRMFZ1M^FN3Y8GRB3\\\nchecksum=66451f49\n"
+    },
+    {
+      "id": "oraculo-37",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=49 checksum=e08e801d\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=zz\\ha'g$g^_8g6u}vwzr\\pe^k;^apidq?+{o9#|ieod{kmp*g\nchecksum=e08e801d\n"
+    },
+    {
+      "id": "oraculo-38",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=81 checksum=f84b25f6\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=i5bm&o-v$ivs6j_&-_~`#7,dngarf{uivb*l/}itedcmq&k.0*j$067_x nk8$k'zi-f1`z[w+v,mp!hm\nchecksum=f84b25f6\n"
+    },
+    {
+      "id": "oraculo-39",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=27 checksum=3e031cd7\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=R@Z6XE.(Y57V9-ZM,T(BCVF|-!L\nchecksum=3e031cd7\n"
+    },
+    {
+      "id": "oraculo-40",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=97 checksum=e33f4182\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=STMYI\"'IM|UNV$K.`S> #YE;GHLH<J UR54O)EIK[G\":7P+,`EK/?T'(!RK+<NN{P?D80P0B;KWNI[Z!%B-'OP^|5L|LY\"MIG\nchecksum=e33f4182\n"
+    },
+    {
+      "id": "oraculo-41",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=96 checksum=5db4fa36\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=NVD{EK/AU%V4+^K/=H3DT1JE.(#=Z7&SU}ODD'D*QIX3%GG)(4]E!VSS@1#IY9(!15!!P#,7<~4Q4]BEV+N/M=:<{QZ4NQC4\nchecksum=5db4fa36\n"
+    },
+    {
+      "id": "oraculo-42",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=49 checksum=afe0359d\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=7m+_%aq-]1ycoy:r%ay9ucvqv~vd<g8i\"'aimut.s!r`dz^|<\nchecksum=afe0359d\n"
+    },
+    {
+      "id": "oraculo-43",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=70 checksum=23ed7be6\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=UN(KL],C+%%}YM`?S<KOT1PFWRVU{E>KA0QXAY*X)IOZUOE!P6@}COPGZ<W'&D-|WP=ZE|\nchecksum=23ed7be6\n"
+    },
+    {
+      "id": "oraculo-44",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=7 checksum=a3662b89\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=w|$*vq^\nchecksum=a3662b89\n"
+    },
+    {
+      "id": "oraculo-45",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=1 checksum=dd0c1e27\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=X\nchecksum=dd0c1e27\n"
+    },
+    {
+      "id": "oraculo-46",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=106 checksum=0a32355a\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=^$NY1/'VE%LNS!FS9'3_B ZC9*%+'DF!*L{MS.UW\\8U`5B51\\R$6TF+#OHI>#EPLA+?|3HJB@/LBXZRUT-8UWAIV`[GZ.B}'@JV8}.K,&F\nchecksum=0a32355a\n"
+    },
+    {
+      "id": "oraculo-47",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=83 checksum=b75210a8\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=dzoanu%zxw+bzo8@\"ui>*whdgm@r}y/ps`8e=8bfeyd*nvwza_hl=&p;$l~(8rw_']ldsyb\"-#*kv4llol>\nchecksum=b75210a8\n"
+    },
+    {
+      "id": "oraculo-48",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=48 checksum=d5542685\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=&ci l[aj_!cjbbnjqubw3:$r{s1ybdg,pte8/*wa$wvb@y\\t\nchecksum=d5542685\n"
+    },
+    {
+      "id": "oraculo-49",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=99 checksum=a3f46dff\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=e\\}f[i!<[dtraka>@{g.a_=5txz`hb|&4qs(p799+jjw*?ip`:f#og/s@n'absu)h0#ogqt,cbftzwddmb [!hbkz'8}op(r'h0\nchecksum=a3f46dff\n"
+    },
+    {
+      "id": "oraculo-50",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=96 checksum=57304ee0\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=0FLRP(%MX<L'VA6\"TTWZ<3CW0)+)QJ @V%BQ!*VGP]]R=<Y4`7$QB\\MJOCOK$E/!XN%[)7,F&GZI{-3KUN @L_E0PKI%1{XS\nchecksum=57304ee0\n"
+    },
+    {
+      "id": "oraculo-51",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=58 checksum=73be8932\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=(o(j,+\"r5d8pn;i:ck#@n+naymbi:w*th)&}5>>>9)gwahw>3'pfa:5geb\nchecksum=73be8932\n"
+    },
+    {
+      "id": "oraculo-52",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=97 checksum=05f4808b\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=2m8t~j]cwpx>xeuqim\"y.{ivbpqgjvk1bb0o?^[^y5$:v8lq%/n=s6yww2m-gvk:xy~@5ox5q`vldw8 x5ml<<ik|6f<,(usa\nchecksum=05f4808b\n"
+    },
+    {
+      "id": "oraculo-53",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=119 checksum=490c51d2\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=3dbkwhtclzsqy$mm0@0]ch$86{[]yk l93d#b?}ylh|kd`pdu\"6=ptupb\"@ia#`>q#u`qmwk/>5-%v&g=cm5hp`ct@&izafuxf5o?t[scjhzocwby;~+o{v\nchecksum=490c51d2\n"
+    },
+    {
+      "id": "oraculo-54",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=34 checksum=4158db19\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=QND'VZ'D4NMW%}T!A*YJ>Q_&B!CR7FEK5J\nchecksum=4158db19\n"
+    },
+    {
+      "id": "oraculo-55",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=11 checksum=1752b5ba\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=E,LLO :$D`W\nchecksum=1752b5ba\n"
+    },
+    {
+      "id": "oraculo-56",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=7 checksum=f59856e8\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=zkyh}iy\nchecksum=f59856e8\n"
+    },
+    {
+      "id": "oraculo-57",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=97 checksum=4530f681\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=8 IUC8CU8#U6!(H+9NIA&+;FWH.;JY- :F$>SK!R])Q V+A5UOTUHU-{J|UR-^,=U|LY1CHZZ\"3]HTSPVWJBM'B<RRJZT\\B_C\nchecksum=4530f681\n"
+    },
+    {
+      "id": "oraculo-58",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=114 checksum=faf45ef1\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=CR]WC8WQAEWPB\"P_R8|K{MW1L=%{MXDZ-NT7SGD@\\DQ+T$Q%XVQG4X,,:AJI*3GQTP0DU:@JSB$ZK$H)B*)Y;\\KQ\\XJ^P6M-4=*S^++Z,`4B17G7<U\nchecksum=faf45ef1\n"
+    },
+    {
+      "id": "oraculo-59",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=65 checksum=61c902a1\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=Q:%P59Z(!~/OX/RNFWSV>HI;PG%DXMGP0N~_=A.*C_$WQ<=;*DB]%SMNG(O!}HM6X\nchecksum=61c902a1\n"
+    },
+    {
+      "id": "paridad-con-simbolos",
+      "retorno": 0,
+      "stdout": "OK id=1042 bytes=17 checksum=d8d9f468\n",
+      "stderr": "RE01 status=0 stage=done\n",
+      "salida": "tag=LAB-RE01\nid=1042\ntext=HTXLSR DOID 2026.\nchecksum=d8d9f468\n"
+    },
+    {
+      "id": "uso",
+      "retorno": 2
+    },
+    {
+      "id": "destino-inexistente",
+      "retorno": 8
+    },
+    {
+      "id": "alias-y-enlace-existentes",
+      "retorno": 7
+    }
+  ],
+  "gdb": {
+    "estado": "OK",
+    "detalle": "ELF stripped con símbolos externos; breakpoint, memoria, retorno e intervención 16->17 verificados",
+    "control_antes": 6,
+    "control_despues": 6,
+    "main_runtime": [
+      "0x57648466da70",
+      "0x55c1f8357a70"
+    ],
+    "bases_distintas_observadas": true
+  }
+}

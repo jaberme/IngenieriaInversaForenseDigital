@@ -1,0 +1,997 @@
+{
+  "binary_overview": {
+    "evidence_id": "ev_0efaecf9839509e7a021575edad1cee02716e3fb0f224e4c6c38bb4c45aa0ee0",
+    "provider": {
+      "id": "rea-workflow",
+      "name": "REA composed investigation workflow",
+      "version": "1"
+    },
+    "parameters": {},
+    "observacion": {
+      "image_base": "0x100000",
+      "procedure_count": 69,
+      "string_count": 70
+    }
+  },
+  "list_procedures": {
+    "evidence_id": "ev_ebc4d1ec43d384b5e017bbce362fad227238ec4863976dd8206717e620764e3b",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "parameters": {},
+    "numero": 69
+  },
+  "search_strings": {
+    "evidence_id": "ev_6d479a4283d490cf92dd007d47fd645bd8f121e46f48a409bec2c5f1324b62ea",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "parameters": {
+      "pattern": "checksum",
+      "mode": "literal",
+      "case_sensitive": false
+    },
+    "observacion": [
+      {
+        "address": "0x1020d8",
+        "value": "tag=%s\nid=%u\ntext=%s\nchecksum=%08x\n"
+      },
+      {
+        "address": "0x102130",
+        "value": "OK id=%u bytes=%u checksum=%08x\n"
+      }
+    ]
+  },
+  "xrefs": {
+    "evidence_id": "ev_93981dd3cd414e31ffa30e7a0fc6f0a00d8a03ef90668d920f9d19f4abea7997",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "parameters": {
+      "address": "0x1020d8"
+    },
+    "observacion": [
+      "0x101a14"
+    ]
+  },
+  "resolve_containing_procedure": {
+    "evidence_id": "ev_5887b0c1d5e6844171f8021c83c298455dd8fdf797ad69c83a47dccc37bf788c",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "parameters": {
+      "address": "0x101a14"
+    },
+    "observacion": {
+      "query_address": "0x101a14",
+      "found": true,
+      "procedure": {
+        "address": "0x1019cd",
+        "name": "FUN_001019cd",
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        },
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x1019cd",
+              "end": "0x101a6f"
+            }
+          ],
+          "total_bytes": 163,
+          "span_bytes": 163,
+          "non_contiguous": false,
+          "contains_entry": true
+        }
+      }
+    }
+  },
+  "configuracion": {
+    "evidence_id": "ev_1c2ad8d4a2f4dcb9eeded782911f10cbc52efeee0766c9f1e065f5a6bc19b076",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "parameters": {
+      "procedure": "0x101309"
+    },
+    "procedure": {
+      "address": "0x101309",
+      "name": "FUN_00101309",
+      "classification": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null,
+        "provenance": "ghidra-function-manager"
+      },
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x101309",
+            "end": "0x10165a"
+          }
+        ],
+        "total_bytes": 850,
+        "span_bytes": 850,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "signature": "undefined FUN_00101309()",
+      "locals": [
+        {
+          "description": "undefined local_138 @ Stack[-0x138]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined8 local_158 @ Stack[-0x158]:8",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined local_15e @ Stack[-0x15e]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined local_162 @ Stack[-0x162]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined local_165 @ Stack[-0x165]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined local_167 @ Stack[-0x167]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined local_169 @ Stack[-0x169]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined local_16b @ Stack[-0x16b]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined local_16d @ Stack[-0x16d]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_1f0 @ Stack[-0x1f0]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined local_208 @ Stack[-0x208]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_20c @ Stack[-0x20c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined local_28 @ Stack[-0x28]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined8 local_30 @ Stack[-0x30]:8",
+          "provenance": "ghidra-function-database"
+        }
+      ]
+    },
+    "pseudocode": "\nundefined4 FUN_00101309(char *param_1,undefined4 *param_2)\n\n{\n  int iVar1;\n  int iVar2;\n  uint uVar3;\n  FILE *__stream;\n  size_t sVar4;\n  void *pvVar5;\n  ulong uVar6;\n  uint uVar7;\n  long lVar8;\n  undefined4 uVar9;\n  long in_FS_OFFSET;\n  int local_20c;\n  stat local_208;\n  undefined1 local_16d [2];\n  undefined1 local_16b [2];\n  undefined1 local_169 [2];\n  undefined1 local_167 [2];\n  char local_165 [3];\n  char local_162 [2];\n  undefined8 uStack_160;\n  undefined8 local_158;\n  undefined1 local_138 [264];\n  long local_30;\n  \n  local_30 = *(long *)(in_FS_OFFSET + 0x28);\n  local_20c = -1;\n  __stream = fopen(param_1,\"rb\");\n  if (__stream == (FILE *)0x0) {\n    uVar9 = 3;\n  }\n  else {\n    iVar1 = fileno(__stream);\n    iVar1 = fstat(iVar1,&local_208);\n    if (iVar1 == 0) {\n      if ((local_208.st_mode & 0xf000) == 0x8000) {\n        sVar4 = fread(local_138,1,0x100,__stream);\n        iVar1 = ferror(__stream);\n        iVar2 = fclose(__stream);\n        if (iVar2 == 0) {\n          if (iVar1 == 0) {\n            if ((sVar4 & 0xfffffffffffffeff) == 0) {\n              uVar9 = 4;\n            }\n            else {\n              pvVar5 = memchr(local_138,0,sVar4);\n              if (pvVar5 == (void *)0x0) {\n                local_138[sVar4] = 0;\n                iVar1 = __isoc99_sscanf(local_138,\n                                        \"mode=%5[a-z]%1[\\n]shift=%2[0-9]%1[\\n]limit=%3[0-9]%1[\\n]tag=%16[A-Za-z0-9_-]%1[\\n]%n\"\n                                        ,(long)&uStack_160 + 2,local_16d,local_165,local_16b,\n                                        local_162,local_169,&local_158,local_167,&local_20c);\n                if (iVar1 == 8) {\n                  if (local_20c == (int)sVar4) {\n                    iVar1 = strcmp((char *)((long)&uStack_160 + 2),\"upper\");\n                    if (iVar1 == 0) {\n                      uVar9 = 0;\n                    }\n                    else {\n                      iVar1 = strcmp((char *)((long)&uStack_160 + 2),\"lower\");\n                      if (iVar1 != 0) {\n                        uVar9 = 4;\n                        goto LAB_0010162f;\n                      }\n                      uVar9 = 1;\n                    }\n                    *param_2 = uVar9;\n                    uVar6 = strtoul(local_165,(char **)0x0,10);\n                    param_2[1] = (int)uVar6;\n                    uVar6 = strtoul(local_162,(char **)0x0,10);\n                    param_2[2] = (int)uVar6;\n                    if (((uint)param_2[1] < 0x1a) && ((int)uVar6 - 1U < 0x80)) {\n                      sVar4 = strlen((char *)&local_158);\n                      uVar6 = sVar4 + 1;\n                      uVar3 = (uint)uVar6;\n                      uVar9 = 0;\n                      if (uVar3 < 8) {\n                        if ((uVar6 & 4) == 0) {\n                          if (uVar3 != 0) {\n                            *(char *)(param_2 + 3) = (char)local_158;\n                            if ((uVar6 & 2) != 0) {\n                              *(undefined2 *)((long)param_2 + (uVar6 & 0xffffffff) + 10) =\n                                   *(undefined2 *)((long)&uStack_160 + (uVar6 & 0xffffffff) + 6);\n                            }\n                          }\n                        }\n                        else {\n                          param_2[3] = (undefined4)local_158;\n                          *(undefined4 *)((long)param_2 + (uVar6 & 0xffffffff) + 8) =\n                               *(undefined4 *)((long)&uStack_160 + (uVar6 & 0xffffffff) + 4);\n                        }\n                      }\n                      else {\n                        *(ulong *)(param_2 + 3) = CONCAT44(local_158._4_4_,(undefined4)local_158);\n                        *(undefined8 *)((long)param_2 + (uVar6 & 0xffffffff) + 4) =\n                             *(undefined8 *)((long)&uStack_160 + (uVar6 & 0xffffffff));\n                        lVar8 = (long)param_2 + (0xc - ((ulong)(param_2 + 5) & 0xfffffffffffffff8));\n                        uVar3 = uVar3 + (int)lVar8 & 0xfffffff8;\n                        if (7 < uVar3) {\n                          uVar6 = 0;\n                          do {\n                            *(undefined8 *)(((ulong)(param_2 + 5) & 0xfffffffffffffff8) + uVar6) =\n                                 *(undefined8 *)((long)&local_158 + (uVar6 - lVar8));\n                            uVar7 = (int)uVar6 + 8;\n                            uVar6 = (ulong)uVar7;\n                          } while (uVar7 < uVar3);\n                        }\n                      }\n                    }\n                    else {\n                      uVar9 = 4;\n                    }\n                  }\n                  else {\n                    uVar9 = 4;\n                  }\n                }\n                else {\n                  uVar9 = 4;\n                }\n              }\n              else {\n                uVar9 = 4;\n              }\n            }\n          }\n          else {\n            uVar9 = 3;\n          }\n          goto LAB_0010162f;\n        }\n      }\n      else {\n        ferror(__stream);\n        iVar1 = fclose(__stream);\n        if (iVar1 == 0) {\n          uVar9 = 3;\n          goto LAB_0010162f;\n        }\n      }\n    }\n    else {\n      ferror(__stream);\n      iVar1 = fclose(__stream);\n      if (iVar1 == 0) {\n        uVar9 = 3;\n        goto LAB_0010162f;\n      }\n    }\n    uVar9 = 3;\n  }\nLAB_0010162f:\n  if (local_30 != *(long *)(in_FS_OFFSET + 0x28)) {\n                    /* WARNING: Subroutine does not return */\n    __stack_chk_fail();\n  }\n  return uVar9;\n}\n\n",
+    "assembly": [
+      "0x101309: ENDBR64",
+      "0x10130d: PUSH RBP",
+      "0x10130e: MOV RBP, RSP",
+      "0x101311: PUSH R14",
+      "0x101313: PUSH R13",
+      "0x101315: PUSH R12",
+      "0x101317: PUSH RBX",
+      "0x101318: SUB RSP, 0x1f0",
+      "0x10131f: MOV R12, RSI",
+      "0x101322: MOV RAX, qword ptr FS:[0x28]",
+      "0x10132b: MOV qword ptr [RBP + -0x28], RAX",
+      "0x10132f: XOR EAX, EAX",
+      "0x101331: MOV dword ptr [RBP + -0x204], 0xffffffff",
+      "0x10133b: LEA RSI, [0x102004]",
+      "0x101342: CALL 0x001011e0",
+      "0x101347: TEST RAX, RAX",
+      "0x10134a: JZ 0x001015dd",
+      "0x101350: MOV RBX, RAX",
+      "0x101353: MOV RDI, RAX",
+      "0x101356: CALL 0x001011b0",
+      "0x10135b: MOV EDI, EAX",
+      "0x10135d: LEA RSI, [RBP + -0x200]",
+      "0x101364: CALL 0x00101210",
+      "0x101369: TEST EAX, EAX",
+      "0x10136b: JNZ 0x00101615",
+      "0x101371: MOV EAX, dword ptr [RBP + -0x1e8]",
+      "0x101377: AND EAX, 0xf000",
+      "0x10137c: CMP EAX, 0x8000",
+      "0x101381: JZ 0x001013a6",
+      "0x101383: MOV RDI, RBX",
+      "0x101386: CALL 0x00101140",
+      "0x10138b: MOV RDI, RBX",
+      "0x10138e: CALL 0x00101160",
+      "0x101393: TEST EAX, EAX",
+      "0x101395: JNZ 0x00101629",
+      "0x10139b: MOV R13D, 0x3",
+      "0x1013a1: JMP 0x0010162f",
+      "0x1013a6: LEA RDI, [RBP + -0x130]",
+      "0x1013ad: MOV RCX, RBX",
+      "0x1013b0: MOV EDX, 0x100",
+      "0x1013b5: MOV ESI, 0x1",
+      "0x1013ba: CALL 0x00101150",
+      "0x1013bf: MOV R14, RAX",
+      "0x1013c2: MOV RDI, RBX",
+      "0x1013c5: CALL 0x00101140",
+      "0x1013ca: MOV R13D, EAX",
+      "0x1013cd: MOV RDI, RBX",
+      "0x1013d0: CALL 0x00101160",
+      "0x1013d5: TEST EAX, EAX",
+      "0x1013d7: JNZ 0x00101629",
+      "0x1013dd: TEST R13D, R13D",
+      "0x1013e0: JNZ 0x001015e5",
+      "0x1013e6: TEST R14, -0x101",
+      "0x1013ed: JZ 0x001015ed",
+      "0x1013f3: LEA RDI, [RBP + -0x130]",
+      "0x1013fa: MOV RDX, R14",
+      "0x1013fd: MOV ESI, 0x0",
+      "0x101402: CALL 0x00101190",
+      "0x101407: TEST RAX, RAX",
+      "0x10140a: JZ 0x00101417",
+      "0x10140c: MOV R13D, 0x4",
+      "0x101412: JMP 0x0010162f",
+      "0x101417: MOV byte ptr [RBP + R14*0x1 + -0x130], 0x0",
+      "0x101420: LEA RCX, [RBP + -0x165]",
+      "0x101427: LEA RDX, [RBP + -0x156]",
+      "0x10142e: LEA RDI, [RBP + -0x130]",
+      "0x101435: SUB RSP, 0x8",
+      "0x101439: LEA RAX, [RBP + -0x204]",
+      "0x101440: PUSH RAX",
+      "0x101441: LEA RAX, [RBP + -0x15f]",
+      "0x101448: PUSH RAX",
+      "0x101449: LEA RAX, [RBP + -0x150]",
+      "0x101450: PUSH RAX",
+      "0x101451: LEA RAX, [RBP + -0x161]",
+      "0x101458: PUSH RAX",
+      "0x101459: LEA RAX, [RBP + -0x15a]",
+      "0x101460: PUSH RAX",
+      "0x101461: LEA R9, [RBP + -0x163]",
+      "0x101468: LEA R8, [RBP + -0x15d]",
+      "0x10146f: LEA RSI, [0x102058]",
+      "0x101476: MOV EAX, 0x0",
+      "0x10147b: CALL 0x001011c0",
+      "0x101480: ADD RSP, 0x30",
+      "0x101484: CMP EAX, 0x8",
+      "0x101487: JNZ 0x001015f5",
+      "0x10148d: CMP dword ptr [RBP + -0x204], R14D",
+      "0x101494: JNZ 0x001015fd",
+      "0x10149a: LEA RDI, [RBP + -0x156]",
+      "0x1014a1: LEA RSI, [0x102007]",
+      "0x1014a8: CALL 0x001011a0",
+      "0x1014ad: TEST EAX, EAX",
+      "0x1014af: JZ 0x001014d3",
+      "0x1014b1: LEA RDI, [RBP + -0x156]",
+      "0x1014b8: LEA RSI, [0x10200d]",
+      "0x1014bf: CALL 0x001011a0",
+      "0x1014c4: TEST EAX, EAX",
+      "0x1014c6: JNZ 0x00101605",
+      "0x1014cc: MOV EAX, 0x1",
+      "0x1014d1: JMP 0x001014d8",
+      "0x1014d3: MOV EAX, 0x0",
+      "0x1014d8: MOV dword ptr [R12], EAX",
+      "0x1014dc: LEA RDI, [RBP + -0x15d]",
+      "0x1014e3: MOV EDX, 0xa",
+      "0x1014e8: MOV ESI, 0x0",
+      "0x1014ed: CALL 0x001011f0",
+      "0x1014f2: MOV dword ptr [R12 + 0x4], EAX",
+      "0x1014f7: LEA RDI, [RBP + -0x15a]",
+      "0x1014fe: MOV EDX, 0xa",
+      "0x101503: MOV ESI, 0x0",
+      "0x101508: CALL 0x001011f0",
+      "0x10150d: MOV dword ptr [R12 + 0x8], EAX",
+      "0x101512: CMP dword ptr [R12 + 0x4], 0x19",
+      "0x101518: JA 0x0010160d",
+      "0x10151e: SUB EAX, 0x1",
+      "0x101521: CMP EAX, 0x7f",
+      "0x101524: JA 0x0010160d",
+      "0x10152a: LEA RBX, [RBP + -0x150]",
+      "0x101531: MOV RDI, RBX",
+      "0x101534: CALL 0x00101170",
+      "0x101539: LEA RDX, [R12 + 0xc]",
+      "0x10153e: ADD RAX, 0x1",
+      "0x101542: CMP EAX, 0x8",
+      "0x101545: JNC 0x00101592",
+      "0x101547: TEST AL, 0x4",
+      "0x101549: JNZ 0x00101578",
+      "0x10154b: TEST EAX, EAX",
+      "0x10154d: JZ 0x0010162f",
+      "0x101553: MOVZX ECX, byte ptr [RBP + -0x150]",
+      "0x10155a: MOV byte ptr [R12 + 0xc], CL",
+      "0x10155f: TEST AL, 0x2",
+      "0x101561: JZ 0x0010162f",
+      "0x101567: MOV EAX, EAX",
+      "0x101569: MOVZX ECX, word ptr [RBX + RAX*0x1 + -0x2]",
+      "0x10156e: MOV word ptr [RDX + RAX*0x1 + -0x2], CX",
+      "0x101573: JMP 0x0010162f",
+      "0x101578: MOV ECX, dword ptr [RBP + -0x150]",
+      "0x10157e: MOV dword ptr [R12 + 0xc], ECX",
+      "0x101583: MOV EAX, EAX",
+      "0x101585: MOV ECX, dword ptr [RBX + RAX*0x1 + -0x4]",
+      "0x101589: MOV dword ptr [RDX + RAX*0x1 + -0x4], ECX",
+      "0x10158d: JMP 0x0010162f",
+      "0x101592: MOV RCX, qword ptr [RBP + -0x150]",
+      "0x101599: MOV qword ptr [R12 + 0xc], RCX",
+      "0x10159e: MOV ECX, EAX",
+      "0x1015a0: MOV RSI, qword ptr [RBX + RCX*0x1 + -0x8]",
+      "0x1015a5: MOV qword ptr [RDX + RCX*0x1 + -0x8], RSI",
+      "0x1015aa: LEA RSI, [RDX + 0x8]",
+      "0x1015ae: AND RSI, -0x8",
+      "0x1015b2: SUB RDX, RSI",
+      "0x1015b5: SUB RBX, RDX",
+      "0x1015b8: ADD EAX, EDX",
+      "0x1015ba: AND EAX, 0xfffffff8",
+      "0x1015bd: CMP EAX, 0x8",
+      "0x1015c0: JC 0x0010162f",
+      "0x1015c2: AND EAX, 0xfffffff8",
+      "0x1015c5: MOV EDX, 0x0",
+      "0x1015ca: MOV ECX, EDX",
+      "0x1015cc: MOV RDI, qword ptr [RBX + RCX*0x1]",
+      "0x1015d0: MOV qword ptr [RSI + RCX*0x1], RDI",
+      "0x1015d4: ADD EDX, 0x8",
+      "0x1015d7: CMP EDX, EAX",
+      "0x1015d9: JC 0x001015ca",
+      "0x1015db: JMP 0x0010162f",
+      "0x1015dd: MOV R13D, 0x3",
+      "0x1015e3: JMP 0x0010162f",
+      "0x1015e5: MOV R13D, 0x3",
+      "0x1015eb: JMP 0x0010162f",
+      "0x1015ed: MOV R13D, 0x4",
+      "0x1015f3: JMP 0x0010162f",
+      "0x1015f5: MOV R13D, 0x4",
+      "0x1015fb: JMP 0x0010162f",
+      "0x1015fd: MOV R13D, 0x4",
+      "0x101603: JMP 0x0010162f",
+      "0x101605: MOV R13D, 0x4",
+      "0x10160b: JMP 0x0010162f",
+      "0x10160d: MOV R13D, 0x4",
+      "0x101613: JMP 0x0010162f",
+      "0x101615: MOV RDI, RBX",
+      "0x101618: CALL 0x00101140",
+      "0x10161d: MOV RDI, RBX",
+      "0x101620: CALL 0x00101160",
+      "0x101625: TEST EAX, EAX",
+      "0x101627: JZ 0x0010164e",
+      "0x101629: MOV R13D, 0x3",
+      "0x10162f: MOV RAX, qword ptr [RBP + -0x28]",
+      "0x101633: SUB RAX, qword ptr FS:[0x28]",
+      "0x10163c: JNZ 0x00101656",
+      "0x10163e: MOV EAX, R13D",
+      "0x101641: LEA RSP, [RBP + -0x20]",
+      "0x101645: POP RBX",
+      "0x101646: POP R12",
+      "0x101648: POP R13",
+      "0x10164a: POP R14",
+      "0x10164c: POP RBP",
+      "0x10164d: RET",
+      "0x10164e: MOV R13D, 0x3",
+      "0x101654: JMP 0x0010162f",
+      "0x101656: CALL 0x00101180"
+    ]
+  },
+  "documento": {
+    "evidence_id": "ev_ce43a41835e34051a49ed4666f3a89092676a36d6973671e2da74bf6556d4844",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "parameters": {
+      "procedure": "0x10165b"
+    },
+    "procedure": {
+      "address": "0x10165b",
+      "name": "FUN_0010165b",
+      "classification": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null,
+        "provenance": "ghidra-function-manager"
+      },
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x10165b",
+            "end": "0x101941"
+          }
+        ],
+        "total_bytes": 743,
+        "span_bytes": 743,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "signature": "undefined FUN_0010165b()",
+      "locals": [
+        {
+          "description": "undefined local_138 @ Stack[-0x138]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined8 local_1c8 @ Stack[-0x1c8]:8",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined local_1cf @ Stack[-0x1cf]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined local_1d1 @ Stack[-0x1d1]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined local_1d3 @ Stack[-0x1d3]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_250 @ Stack[-0x250]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined local_268 @ Stack[-0x268]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_26c @ Stack[-0x26c]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined local_28 @ Stack[-0x28]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined8 local_30 @ Stack[-0x30]:8",
+          "provenance": "ghidra-function-database"
+        }
+      ]
+    },
+    "pseudocode": "\nundefined4 FUN_0010165b(char *param_1,int *param_2)\n\n{\n  int iVar1;\n  int iVar2;\n  uint uVar3;\n  FILE *__stream;\n  size_t sVar4;\n  void *pvVar5;\n  ulong uVar6;\n  char *pcVar7;\n  long lVar8;\n  undefined8 *puVar9;\n  undefined8 *puVar10;\n  undefined4 uVar11;\n  long in_FS_OFFSET;\n  byte bVar12;\n  int local_26c;\n  stat local_268;\n  undefined1 local_1d3 [2];\n  undefined1 local_1d1;\n  undefined8 uStack_1d0;\n  undefined4 local_1c8;\n  undefined4 uStack_1c4;\n  undefined1 local_138 [264];\n  long local_30;\n  \n  bVar12 = 0;\n  local_30 = *(long *)(in_FS_OFFSET + 0x28);\n  local_26c = -1;\n  __stream = fopen(param_1,\"rb\");\n  if (__stream == (FILE *)0x0) {\n    uVar11 = 3;\n  }\n  else {\n    iVar1 = fileno(__stream);\n    iVar1 = fstat(iVar1,&local_268);\n    if (iVar1 == 0) {\n      if ((local_268.st_mode & 0xf000) == 0x8000) {\n        sVar4 = fread(local_138,1,0x100,__stream);\n        iVar1 = ferror(__stream);\n        iVar2 = fclose(__stream);\n        if (iVar2 == 0) {\n          if (iVar1 == 0) {\n            if ((sVar4 & 0xfffffffffffffeff) == 0) {\n              uVar11 = 5;\n            }\n            else {\n              pvVar5 = memchr(local_138,0,sVar4);\n              if (pvVar5 == (void *)0x0) {\n                local_138[sVar4] = 0;\n                iVar1 = __isoc99_sscanf(local_138,\"id=%6[0-9]%1[\\n]text=%128[^\\n]%1[\\n]%n\",\n                                        (long)&uStack_1d0 + 1,local_1d3,&local_1c8,&local_1d1,\n                                        &local_26c);\n                if (iVar1 == 4) {\n                  if (local_26c == (int)sVar4) {\n                    uVar6 = strtoul((char *)((long)&uStack_1d0 + 1),(char **)0x0,10);\n                    *param_2 = (int)uVar6;\n                    sVar4 = strlen((char *)&local_1c8);\n                    iVar1 = (int)sVar4;\n                    param_2[1] = iVar1;\n                    if ((int)uVar6 - 1U < 999999) {\n                      if (iVar1 != 0) {\n                        pcVar7 = (char *)&local_1c8;\n                        do {\n                          if (0x5e < (byte)(*pcVar7 - 0x20U)) {\n                            uVar11 = 5;\n                            goto LAB_00101916;\n                          }\n                          pcVar7 = pcVar7 + 1;\n                        } while ((char *)((long)&local_1c8 + (ulong)(iVar1 - 1) + 1) != pcVar7);\n                      }\n                      uVar3 = iVar1 + 1;\n                      uVar11 = 0;\n                      if (uVar3 < 8) {\n                        if ((uVar3 & 4) == 0) {\n                          if (uVar3 != 0) {\n                            *(char *)(param_2 + 2) = (char)local_1c8;\n                            if ((uVar3 & 2) != 0) {\n                              *(undefined2 *)((long)param_2 + (ulong)uVar3 + 6) =\n                                   *(undefined2 *)((long)&uStack_1d0 + (ulong)uVar3 + 6);\n                            }\n                          }\n                        }\n                        else {\n                          param_2[2] = local_1c8;\n                          *(undefined4 *)((long)param_2 + (ulong)uVar3 + 4) =\n                               *(undefined4 *)((long)&uStack_1d0 + (ulong)uVar3 + 4);\n                        }\n                      }\n                      else {\n                        *(ulong *)(param_2 + 2) = CONCAT44(uStack_1c4,local_1c8);\n                        *(undefined8 *)((long)param_2 + (ulong)uVar3) =\n                             *(undefined8 *)((long)&uStack_1d0 + (ulong)uVar3);\n                        lVar8 = (long)param_2 +\n                                (8 - (long)((ulong)(param_2 + 4) & 0xfffffffffffffff8));\n                        puVar9 = (undefined8 *)((long)&local_1c8 - lVar8);\n                        puVar10 = (undefined8 *)((ulong)(param_2 + 4) & 0xfffffffffffffff8);\n                        for (uVar6 = (ulong)(uVar3 + (int)lVar8 >> 3); uVar6 != 0; uVar6 = uVar6 - 1\n                            ) {\n                          *puVar10 = *puVar9;\n                          puVar9 = puVar9 + (ulong)bVar12 * -2 + 1;\n                          puVar10 = puVar10 + (ulong)bVar12 * -2 + 1;\n                        }\n                      }\n                    }\n                    else {\n                      uVar11 = 5;\n                    }\n                  }\n                  else {\n                    uVar11 = 5;\n                  }\n                }\n                else {\n                  uVar11 = 5;\n                }\n              }\n              else {\n                uVar11 = 5;\n              }\n            }\n          }\n          else {\n            uVar11 = 3;\n          }\n          goto LAB_00101916;\n        }\n      }\n      else {\n        ferror(__stream);\n        iVar1 = fclose(__stream);\n        if (iVar1 == 0) {\n          uVar11 = 3;\n          goto LAB_00101916;\n        }\n      }\n    }\n    else {\n      ferror(__stream);\n      iVar1 = fclose(__stream);\n      if (iVar1 == 0) {\n        uVar11 = 3;\n        goto LAB_00101916;\n      }\n    }\n    uVar11 = 3;\n  }\nLAB_00101916:\n  if (local_30 != *(long *)(in_FS_OFFSET + 0x28)) {\n                    /* WARNING: Subroutine does not return */\n    __stack_chk_fail();\n  }\n  return uVar11;\n}\n\n",
+    "assembly": [
+      "0x10165b: ENDBR64",
+      "0x10165f: PUSH RBP",
+      "0x101660: MOV RBP, RSP",
+      "0x101663: PUSH R14",
+      "0x101665: PUSH R13",
+      "0x101667: PUSH R12",
+      "0x101669: PUSH RBX",
+      "0x10166a: SUB RSP, 0x250",
+      "0x101671: MOV R12, RSI",
+      "0x101674: MOV RAX, qword ptr FS:[0x28]",
+      "0x10167d: MOV qword ptr [RBP + -0x28], RAX",
+      "0x101681: XOR EAX, EAX",
+      "0x101683: MOV dword ptr [RBP + -0x264], 0xffffffff",
+      "0x10168d: LEA RSI, [0x102004]",
+      "0x101694: CALL 0x001011e0",
+      "0x101699: TEST RAX, RAX",
+      "0x10169c: JZ 0x001018cc",
+      "0x1016a2: MOV RBX, RAX",
+      "0x1016a5: MOV RDI, RAX",
+      "0x1016a8: CALL 0x001011b0",
+      "0x1016ad: MOV EDI, EAX",
+      "0x1016af: LEA RSI, [RBP + -0x260]",
+      "0x1016b6: CALL 0x00101210",
+      "0x1016bb: TEST EAX, EAX",
+      "0x1016bd: JNZ 0x001018fc",
+      "0x1016c3: MOV EAX, dword ptr [RBP + -0x248]",
+      "0x1016c9: AND EAX, 0xf000",
+      "0x1016ce: CMP EAX, 0x8000",
+      "0x1016d3: JZ 0x001016f8",
+      "0x1016d5: MOV RDI, RBX",
+      "0x1016d8: CALL 0x00101140",
+      "0x1016dd: MOV RDI, RBX",
+      "0x1016e0: CALL 0x00101160",
+      "0x1016e5: TEST EAX, EAX",
+      "0x1016e7: JNZ 0x00101910",
+      "0x1016ed: MOV R13D, 0x3",
+      "0x1016f3: JMP 0x00101916",
+      "0x1016f8: LEA RDI, [RBP + -0x130]",
+      "0x1016ff: MOV RCX, RBX",
+      "0x101702: MOV EDX, 0x100",
+      "0x101707: MOV ESI, 0x1",
+      "0x10170c: CALL 0x00101150",
+      "0x101711: MOV R14, RAX",
+      "0x101714: MOV RDI, RBX",
+      "0x101717: CALL 0x00101140",
+      "0x10171c: MOV R13D, EAX",
+      "0x10171f: MOV RDI, RBX",
+      "0x101722: CALL 0x00101160",
+      "0x101727: TEST EAX, EAX",
+      "0x101729: JNZ 0x00101910",
+      "0x10172f: TEST R13D, R13D",
+      "0x101732: JNZ 0x001018d4",
+      "0x101738: TEST R14, -0x101",
+      "0x10173f: JZ 0x001018dc",
+      "0x101745: LEA RDI, [RBP + -0x130]",
+      "0x10174c: MOV RDX, R14",
+      "0x10174f: MOV ESI, 0x0",
+      "0x101754: CALL 0x00101190",
+      "0x101759: TEST RAX, RAX",
+      "0x10175c: JZ 0x00101769",
+      "0x10175e: MOV R13D, 0x5",
+      "0x101764: JMP 0x00101916",
+      "0x101769: MOV byte ptr [RBP + R14*0x1 + -0x130], 0x0",
+      "0x101772: LEA RCX, [RBP + -0x1cb]",
+      "0x101779: LEA RDX, [RBP + -0x1c7]",
+      "0x101780: LEA RDI, [RBP + -0x130]",
+      "0x101787: SUB RSP, 0x8",
+      "0x10178b: LEA RAX, [RBP + -0x264]",
+      "0x101792: PUSH RAX",
+      "0x101793: LEA R9, [RBP + -0x1c9]",
+      "0x10179a: LEA R8, [RBP + -0x1c0]",
+      "0x1017a1: LEA RSI, [0x1020b0]",
+      "0x1017a8: MOV EAX, 0x0",
+      "0x1017ad: CALL 0x001011c0",
+      "0x1017b2: ADD RSP, 0x10",
+      "0x1017b6: CMP EAX, 0x4",
+      "0x1017b9: JNZ 0x001018e4",
+      "0x1017bf: CMP dword ptr [RBP + -0x264], R14D",
+      "0x1017c6: JZ 0x001017d3",
+      "0x1017c8: MOV R13D, 0x5",
+      "0x1017ce: JMP 0x00101916",
+      "0x1017d3: LEA RDI, [RBP + -0x1c7]",
+      "0x1017da: MOV EDX, 0xa",
+      "0x1017df: MOV ESI, 0x0",
+      "0x1017e4: CALL 0x001011f0",
+      "0x1017e9: MOV RBX, RAX",
+      "0x1017ec: MOV dword ptr [R12], EAX",
+      "0x1017f0: LEA RDI, [RBP + -0x1c0]",
+      "0x1017f7: CALL 0x00101170",
+      "0x1017fc: MOV dword ptr [R12 + 0x4], EAX",
+      "0x101801: SUB EBX, 0x1",
+      "0x101804: CMP EBX, 0xf423e",
+      "0x10180a: JA 0x001018ec",
+      "0x101810: TEST EAX, EAX",
+      "0x101812: JZ 0x0010183e",
+      "0x101814: LEA RCX, [RBP + -0x1c0]",
+      "0x10181b: LEA EDX, [RAX + -0x1]",
+      "0x10181e: LEA RSI, [RBP + RDX*0x1 + -0x1bf]",
+      "0x101826: MOVZX EDX, byte ptr [RCX]",
+      "0x101829: SUB EDX, 0x20",
+      "0x10182c: CMP DL, 0x5e",
+      "0x10182f: JA 0x001018f4",
+      "0x101835: ADD RCX, 0x1",
+      "0x101839: CMP RSI, RCX",
+      "0x10183c: JNZ 0x00101826",
+      "0x10183e: LEA RDX, [R12 + 0x8]",
+      "0x101843: ADD EAX, 0x1",
+      "0x101846: LEA RSI, [RBP + -0x1c0]",
+      "0x10184d: CMP EAX, 0x8",
+      "0x101850: JNC 0x0010189a",
+      "0x101852: TEST AL, 0x4",
+      "0x101854: JNZ 0x00101883",
+      "0x101856: TEST EAX, EAX",
+      "0x101858: JZ 0x00101916",
+      "0x10185e: MOVZX ECX, byte ptr [RBP + -0x1c0]",
+      "0x101865: MOV byte ptr [R12 + 0x8], CL",
+      "0x10186a: TEST AL, 0x2",
+      "0x10186c: JZ 0x00101916",
+      "0x101872: MOV EAX, EAX",
+      "0x101874: MOVZX ECX, word ptr [RSI + RAX*0x1 + -0x2]",
+      "0x101879: MOV word ptr [RDX + RAX*0x1 + -0x2], CX",
+      "0x10187e: JMP 0x00101916",
+      "0x101883: MOV ECX, dword ptr [RBP + -0x1c0]",
+      "0x101889: MOV dword ptr [R12 + 0x8], ECX",
+      "0x10188e: MOV EAX, EAX",
+      "0x101890: MOV ECX, dword ptr [RSI + RAX*0x1 + -0x4]",
+      "0x101894: MOV dword ptr [RDX + RAX*0x1 + -0x4], ECX",
+      "0x101898: JMP 0x00101916",
+      "0x10189a: MOV RCX, qword ptr [RBP + -0x1c0]",
+      "0x1018a1: MOV qword ptr [R12 + 0x8], RCX",
+      "0x1018a6: MOV ECX, EAX",
+      "0x1018a8: MOV RDI, qword ptr [RSI + RCX*0x1 + -0x8]",
+      "0x1018ad: MOV qword ptr [RDX + RCX*0x1 + -0x8], RDI",
+      "0x1018b2: LEA RDI, [RDX + 0x8]",
+      "0x1018b6: AND RDI, -0x8",
+      "0x1018ba: SUB RDX, RDI",
+      "0x1018bd: SUB RSI, RDX",
+      "0x1018c0: ADD EAX, EDX",
+      "0x1018c2: SHR EAX, 0x3",
+      "0x1018c5: MOV ECX, EAX",
+      "0x1018c7: MOVSQ.REP RDI, RSI",
+      "0x1018ca: JMP 0x00101916",
+      "0x1018cc: MOV R13D, 0x3",
+      "0x1018d2: JMP 0x00101916",
+      "0x1018d4: MOV R13D, 0x3",
+      "0x1018da: JMP 0x00101916",
+      "0x1018dc: MOV R13D, 0x5",
+      "0x1018e2: JMP 0x00101916",
+      "0x1018e4: MOV R13D, 0x5",
+      "0x1018ea: JMP 0x00101916",
+      "0x1018ec: MOV R13D, 0x5",
+      "0x1018f2: JMP 0x00101916",
+      "0x1018f4: MOV R13D, 0x5",
+      "0x1018fa: JMP 0x00101916",
+      "0x1018fc: MOV RDI, RBX",
+      "0x1018ff: CALL 0x00101140",
+      "0x101904: MOV RDI, RBX",
+      "0x101907: CALL 0x00101160",
+      "0x10190c: TEST EAX, EAX",
+      "0x10190e: JZ 0x00101935",
+      "0x101910: MOV R13D, 0x3",
+      "0x101916: MOV RAX, qword ptr [RBP + -0x28]",
+      "0x10191a: SUB RAX, qword ptr FS:[0x28]",
+      "0x101923: JNZ 0x0010193d",
+      "0x101925: MOV EAX, R13D",
+      "0x101928: LEA RSP, [RBP + -0x20]",
+      "0x10192c: POP RBX",
+      "0x10192d: POP R12",
+      "0x10192f: POP R13",
+      "0x101931: POP R14",
+      "0x101933: POP RBP",
+      "0x101934: RET",
+      "0x101935: MOV R13D, 0x3",
+      "0x10193b: JMP 0x00101916",
+      "0x10193d: CALL 0x00101180"
+    ]
+  },
+  "transformacion": {
+    "evidence_id": "ev_48c53081189edf456ee3516ed8d3cddf12d2cb43aa4ff291b94cc33aa778df7c",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "parameters": {
+      "procedure": "0x101942"
+    },
+    "procedure": {
+      "address": "0x101942",
+      "name": "FUN_00101942",
+      "classification": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null,
+        "provenance": "ghidra-function-manager"
+      },
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x101942",
+            "end": "0x1019cc"
+          }
+        ],
+        "total_bytes": 139,
+        "span_bytes": 139,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "signature": "undefined FUN_00101942()",
+      "locals": []
+    },
+    "pseudocode": "\nuint FUN_00101942(int *param_1,long param_2,long param_3)\n\n{\n  char cVar1;\n  byte bVar2;\n  uint uVar3;\n  ulong uVar4;\n  uint uVar5;\n  \n  if (*(int *)(param_2 + 4) == 0) {\n    uVar5 = 0x811c9dc5;\n    uVar3 = 0;\n  }\n  else {\n    uVar4 = 0;\n    uVar5 = 0x811c9dc5;\n    do {\n      bVar2 = *(byte *)(param_2 + 8 + (uVar4 & 0xffffffff));\n      uVar3 = (uint)bVar2;\n      if ((byte)(bVar2 + 0x9f) < 0x1a) {\n        uVar3 = uVar3 - 0x20;\nLAB_00101993:\n        cVar1 = (char)((param_1[1] + -0x41 + (uVar3 & 0xff)) % 0x1a);\n        bVar2 = cVar1 + 0x61;\n        if (*param_1 != 1) {\n          bVar2 = cVar1 + 0x41;\n        }\n      }\n      else if ((byte)(bVar2 + 0xbf) < 0x1a) goto LAB_00101993;\n      *(byte *)(param_3 + uVar4) = bVar2;\n      uVar5 = (bVar2 ^ uVar5) * 0x1000193;\n      uVar3 = *(uint *)(param_2 + 4);\n      uVar4 = uVar4 + 1;\n    } while ((uint)uVar4 < uVar3);\n  }\n  *(undefined1 *)(param_3 + (ulong)uVar3) = 0;\n  return uVar5;\n}\n\n",
+    "assembly": [
+      "0x101942: ENDBR64",
+      "0x101946: MOV R8, RDX",
+      "0x101949: MOV EAX, dword ptr [RSI + 0x4]",
+      "0x10194c: TEST EAX, EAX",
+      "0x10194e: JZ 0x001019bc",
+      "0x101950: MOV EDX, 0x0",
+      "0x101955: MOV R9D, 0x811c9dc5",
+      "0x10195b: JMP 0x00101981",
+      "0x10195d: LEA ECX, [RAX + -0x41]",
+      "0x101960: CMP CL, 0x19",
+      "0x101963: JBE 0x00101993",
+      "0x101965: MOV byte ptr [R8 + RDX*0x1], AL",
+      "0x101969: MOVZX EAX, AL",
+      "0x10196c: XOR EAX, R9D",
+      "0x10196f: IMUL R9D, EAX, 0x1000193",
+      "0x101976: MOV EAX, dword ptr [RSI + 0x4]",
+      "0x101979: ADD RDX, 0x1",
+      "0x10197d: CMP EDX, EAX",
+      "0x10197f: JNC 0x001019c2",
+      "0x101981: MOV EAX, EDX",
+      "0x101983: MOVZX EAX, byte ptr [RSI + RAX*0x1 + 0x8]",
+      "0x101988: LEA ECX, [RAX + -0x61]",
+      "0x10198b: CMP CL, 0x19",
+      "0x10198e: JA 0x0010195d",
+      "0x101990: SUB EAX, 0x20",
+      "0x101993: MOV ECX, dword ptr [RDI + 0x4]",
+      "0x101996: MOVZX EAX, AL",
+      "0x101999: LEA ECX, [RCX + RAX*0x1 + -0x41]",
+      "0x10199d: MOV EAX, ECX",
+      "0x10199f: IMUL RAX, RAX, 0x4ec4ec4f",
+      "0x1019a6: SHR RAX, 0x23",
+      "0x1019aa: IMUL EAX, EAX, 0x1a",
+      "0x1019ad: SUB ECX, EAX",
+      "0x1019af: LEA EAX, [RCX + 0x61]",
+      "0x1019b2: CMP dword ptr [RDI], 0x1",
+      "0x1019b5: JZ 0x00101965",
+      "0x1019b7: LEA EAX, [RCX + 0x41]",
+      "0x1019ba: JMP 0x00101965",
+      "0x1019bc: MOV R9D, 0x811c9dc5",
+      "0x1019c2: MOV EAX, EAX",
+      "0x1019c4: MOV byte ptr [R8 + RAX*0x1], 0x0",
+      "0x1019c9: MOV EAX, R9D",
+      "0x1019cc: RET"
+    ]
+  },
+  "salida": {
+    "evidence_id": "ev_1757a72bc8d7c1cc2f608f77dce0ccf5e032d61a79da834cb3d77d22dce1bb6e",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "parameters": {
+      "procedure": "0x1019cd"
+    },
+    "procedure": {
+      "address": "0x1019cd",
+      "name": "FUN_001019cd",
+      "classification": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null,
+        "provenance": "ghidra-function-manager"
+      },
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x1019cd",
+            "end": "0x101a6f"
+          }
+        ],
+        "total_bytes": 163,
+        "span_bytes": 163,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "signature": "undefined FUN_001019cd()",
+      "locals": [
+        {
+          "description": "undefined local_30 @ Stack[-0x30]:1",
+          "provenance": "ghidra-function-database"
+        }
+      ]
+    },
+    "pseudocode": "\nint FUN_001019cd(char *param_1,long param_2,undefined4 *param_3,undefined8 param_4,\n                undefined4 param_5)\n\n{\n  uint uVar1;\n  int iVar2;\n  FILE *__stream;\n  int *piVar3;\n  \n  __stream = fopen(param_1,\"wx\");\n  if (__stream == (FILE *)0x0) {\n    piVar3 = __errno_location();\n    iVar2 = (*piVar3 != 0x11) + 7;\n  }\n  else {\n    uVar1 = __fprintf_chk(__stream,2,\"tag=%s\\nid=%u\\ntext=%s\\nchecksum=%08x\\n\",param_2 + 0xc,\n                          *param_3,param_4,param_5);\n    iVar2 = fclose(__stream);\n    iVar2 = ((uint)(iVar2 != 0) | uVar1 >> 0x1f) << 3;\n  }\n  return iVar2;\n}\n\n",
+    "assembly": [
+      "0x1019cd: ENDBR64",
+      "0x1019d1: PUSH RBP",
+      "0x1019d2: MOV RBP, RSP",
+      "0x1019d5: PUSH R15",
+      "0x1019d7: PUSH R14",
+      "0x1019d9: PUSH R13",
+      "0x1019db: PUSH R12",
+      "0x1019dd: PUSH RBX",
+      "0x1019de: SUB RSP, 0x8",
+      "0x1019e2: MOV R12, RSI",
+      "0x1019e5: MOV R13, RDX",
+      "0x1019e8: MOV R14, RCX",
+      "0x1019eb: MOV R15D, R8D",
+      "0x1019ee: LEA RSI, [0x102013]",
+      "0x1019f5: CALL 0x001011e0",
+      "0x1019fa: TEST RAX, RAX",
+      "0x1019fd: JZ 0x00101a5d",
+      "0x1019ff: MOV RBX, RAX",
+      "0x101a02: LEA RCX, [R12 + 0xc]",
+      "0x101a07: SUB RSP, 0x8",
+      "0x101a0b: PUSH R15",
+      "0x101a0d: MOV R9, R14",
+      "0x101a10: MOV R8D, dword ptr [R13]",
+      "0x101a14: LEA RDX, [0x1020d8]",
+      "0x101a1b: MOV ESI, 0x2",
+      "0x101a20: MOV RDI, RAX",
+      "0x101a23: MOV EAX, 0x0",
+      "0x101a28: CALL 0x00101200",
+      "0x101a2d: MOV R12D, EAX",
+      "0x101a30: MOV RDI, RBX",
+      "0x101a33: CALL 0x00101160",
+      "0x101a38: SHR R12D, 0x1f",
+      "0x101a3c: ADD RSP, 0x10",
+      "0x101a40: TEST EAX, EAX",
+      "0x101a42: SETNZ AL",
+      "0x101a45: MOVZX EAX, AL",
+      "0x101a48: OR EAX, R12D",
+      "0x101a4b: SHL EAX, 0x3",
+      "0x101a4e: LEA RSP, [RBP + -0x28]",
+      "0x101a52: POP RBX",
+      "0x101a53: POP R12",
+      "0x101a55: POP R13",
+      "0x101a57: POP R14",
+      "0x101a59: POP R15",
+      "0x101a5b: POP RBP",
+      "0x101a5c: RET",
+      "0x101a5d: CALL 0x00101130",
+      "0x101a62: CMP dword ptr [RAX], 0x11",
+      "0x101a65: SETNZ AL",
+      "0x101a68: MOVZX EAX, AL",
+      "0x101a6b: ADD EAX, 0x7",
+      "0x101a6e: JMP 0x00101a4e"
+    ]
+  },
+  "principal": {
+    "evidence_id": "ev_7975e88bc64669ff7845df1fb82f09a22915e5504340f744384fba0cc22c97bf",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "parameters": {
+      "procedure": "0x101a70"
+    },
+    "procedure": {
+      "address": "0x101a70",
+      "name": "FUN_00101a70",
+      "classification": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null,
+        "provenance": "ghidra-function-manager"
+      },
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x101a70",
+            "end": "0x101c13"
+          }
+        ],
+        "total_bytes": 420,
+        "span_bytes": 420,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "signature": "undefined FUN_00101a70()",
+      "locals": [
+        {
+          "description": "undefined4 local_150 @ Stack[-0x150]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_154 @ Stack[-0x154]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined4 local_158 @ Stack[-0x158]:4",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined1[16] local_168 @ Stack[-0x168]:16",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined1[16] local_178 @ Stack[-0x178]:16",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined8 local_40 @ Stack[-0x40]:8",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined local_c8 @ Stack[-0xc8]:1",
+          "provenance": "ghidra-function-database"
+        }
+      ]
+    },
+    "pseudocode": "\nint FUN_00101a70(int param_1,long param_2)\n\n{\n  int iVar1;\n  undefined4 uVar2;\n  long lVar3;\n  undefined8 *puVar4;\n  char *pcVar5;\n  long in_FS_OFFSET;\n  undefined1 local_178 [16];\n  undefined1 local_168 [16];\n  undefined8 local_158;\n  undefined1 local_c8 [136];\n  long local_40;\n  \n  local_40 = *(long *)(in_FS_OFFSET + 0x28);\n  local_178 = (undefined1  [16])0x0;\n  local_168 = (undefined1  [16])0x0;\n  puVar4 = &local_158;\n  for (lVar3 = 0x11; lVar3 != 0; lVar3 = lVar3 + -1) {\n    *puVar4 = 0;\n    puVar4 = puVar4 + 1;\n  }\n  *(undefined4 *)puVar4 = 0;\n  if (param_1 == 4) {\n    iVar1 = FUN_00101309(*(undefined8 *)(param_2 + 8),local_178);\n    pcVar5 = \"config\";\n    if (iVar1 == 0) {\n      iVar1 = FUN_0010165b(*(undefined8 *)(param_2 + 0x10),&local_158);\n      pcVar5 = \"document\";\n      if (iVar1 == 0) {\n        if ((uint)local_178._8_4_ < local_158._4_4_) {\n          pcVar5 = \"limit\";\n          iVar1 = 6;\n        }\n        else {\n          uVar2 = FUN_00101942(local_178,&local_158,local_c8);\n          iVar1 = FUN_001019cd(*(undefined8 *)(param_2 + 0x18),local_178,&local_158,local_c8,uVar2);\n          pcVar5 = \"write\";\n          if (iVar1 == 0) {\n            __printf_chk(2,\"OK id=%u bytes=%u checksum=%08x\\n\",(undefined4)local_158,local_158._4_4_\n                         ,uVar2);\n            pcVar5 = \"done\";\n          }\n        }\n      }\n    }\n  }\n  else {\n    __fprintf_chk(stderr,2,\"Uso: RE-01 CONFIG DOCUMENTO SALIDA_NUEVA\\n\");\n    pcVar5 = \"usage\";\n    iVar1 = 2;\n  }\n  __fprintf_chk(stderr,2,\"RE01 status=%d stage=%s\\n\",iVar1,pcVar5);\n  if (local_40 == *(long *)(in_FS_OFFSET + 0x28)) {\n    return iVar1;\n  }\n                    /* WARNING: Subroutine does not return */\n  __stack_chk_fail();\n}\n\n",
+    "assembly": [
+      "0x101a70: ENDBR64",
+      "0x101a74: PUSH RBP",
+      "0x101a75: MOV RBP, RSP",
+      "0x101a78: PUSH R15",
+      "0x101a7a: PUSH R14",
+      "0x101a7c: PUSH R13",
+      "0x101a7e: PUSH R12",
+      "0x101a80: PUSH RBX",
+      "0x101a81: SUB RSP, 0x148",
+      "0x101a88: MOV EDX, EDI",
+      "0x101a8a: MOV RAX, qword ptr FS:[0x28]",
+      "0x101a93: MOV qword ptr [RBP + -0x38], RAX",
+      "0x101a97: XOR EAX, EAX",
+      "0x101a99: PXOR XMM0, XMM0",
+      "0x101a9d: MOVAPS xmmword ptr [RBP + -0x170], XMM0",
+      "0x101aa4: MOVAPS xmmword ptr [RBP + -0x160], XMM0",
+      "0x101aab: LEA RDI, [RBP + -0x150]",
+      "0x101ab2: MOV ECX, 0x11",
+      "0x101ab7: STOSQ.REP RDI",
+      "0x101aba: MOV dword ptr [RDI], 0x0",
+      "0x101ac0: CMP EDX, 0x4",
+      "0x101ac3: JNZ 0x00101b97",
+      "0x101ac9: MOV RBX, RSI",
+      "0x101acc: LEA RSI, [RBP + -0x170]",
+      "0x101ad3: MOV RDI, qword ptr [RBX + 0x8]",
+      "0x101ad7: CALL 0x00101309",
+      "0x101adc: MOV R13D, EAX",
+      "0x101adf: LEA R8, [0x10201c]",
+      "0x101ae6: TEST EAX, EAX",
+      "0x101ae8: JNZ 0x00101bbc",
+      "0x101aee: LEA RSI, [RBP + -0x150]",
+      "0x101af5: MOV RDI, qword ptr [RBX + 0x10]",
+      "0x101af9: CALL 0x0010165b",
+      "0x101afe: MOV R13D, EAX",
+      "0x101b01: LEA R8, [0x102023]",
+      "0x101b08: TEST EAX, EAX",
+      "0x101b0a: JNZ 0x00101bbc",
+      "0x101b10: MOV R12D, dword ptr [RBP + -0x14c]",
+      "0x101b17: CMP dword ptr [RBP + -0x168], R12D",
+      "0x101b1e: JC 0x00101c00",
+      "0x101b24: LEA R15, [RBP + -0xc0]",
+      "0x101b2b: LEA R14, [RBP + -0x150]",
+      "0x101b32: LEA R13, [RBP + -0x170]",
+      "0x101b39: MOV RDX, R15",
+      "0x101b3c: MOV RSI, R14",
+      "0x101b3f: MOV RDI, R13",
+      "0x101b42: CALL 0x00101942",
+      "0x101b47: MOV RDI, qword ptr [RBX + 0x18]",
+      "0x101b4b: MOV EBX, EAX",
+      "0x101b4d: MOV R8D, EAX",
+      "0x101b50: MOV RCX, R15",
+      "0x101b53: MOV RDX, R14",
+      "0x101b56: MOV RSI, R13",
+      "0x101b59: CALL 0x001019cd",
+      "0x101b5e: MOV R13D, EAX",
+      "0x101b61: LEA R8, [0x102032]",
+      "0x101b68: TEST EAX, EAX",
+      "0x101b6a: JNZ 0x00101bbc",
+      "0x101b6c: MOV R8D, EBX",
+      "0x101b6f: MOV ECX, R12D",
+      "0x101b72: MOV EDX, dword ptr [RBP + -0x150]",
+      "0x101b78: LEA RSI, [0x102130]",
+      "0x101b7f: MOV EDI, 0x2",
+      "0x101b84: MOV EAX, 0x0",
+      "0x101b89: CALL 0x001011d0",
+      "0x101b8e: LEA R8, [0x102038]",
+      "0x101b95: JMP 0x00101bbc",
+      "0x101b97: LEA RDX, [0x102100]",
+      "0x101b9e: MOV ESI, 0x2",
+      "0x101ba3: MOV RDI, qword ptr [0x00104020]",
+      "0x101baa: CALL 0x00101200",
+      "0x101baf: LEA R8, [0x102016]",
+      "0x101bb6: MOV R13D, 0x2",
+      "0x101bbc: MOV ECX, R13D",
+      "0x101bbf: LEA RDX, [0x10203d]",
+      "0x101bc6: MOV ESI, 0x2",
+      "0x101bcb: MOV RDI, qword ptr [0x00104020]",
+      "0x101bd2: MOV EAX, 0x0",
+      "0x101bd7: CALL 0x00101200",
+      "0x101bdc: MOV RAX, qword ptr [RBP + -0x38]",
+      "0x101be0: SUB RAX, qword ptr FS:[0x28]",
+      "0x101be9: JNZ 0x00101c0f",
+      "0x101beb: MOV EAX, R13D",
+      "0x101bee: ADD RSP, 0x148",
+      "0x101bf5: POP RBX",
+      "0x101bf6: POP R12",
+      "0x101bf8: POP R13",
+      "0x101bfa: POP R14",
+      "0x101bfc: POP R15",
+      "0x101bfe: POP RBP",
+      "0x101bff: RET",
+      "0x101c00: LEA R8, [0x10202c]",
+      "0x101c07: MOV R13D, 0x6",
+      "0x101c0d: JMP 0x00101bbc",
+      "0x101c0f: CALL 0x00101180"
+    ]
+  }
+}

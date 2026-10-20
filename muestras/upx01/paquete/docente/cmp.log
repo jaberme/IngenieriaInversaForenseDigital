@@ -1,0 +1,12 @@
+{
+  "id": "cmp",
+  "comando": [
+    "cmp",
+    "-s",
+    "/home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/alumnado/original",
+    "/home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/docente/recuperado"
+  ],
+  "retorno": 0,
+  "stdout": "",
+  "stderr": ""
+}

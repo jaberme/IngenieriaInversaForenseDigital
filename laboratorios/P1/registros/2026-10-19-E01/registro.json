@@ -1,0 +1,568 @@
+{
+  "inicio_utc": "2026-10-19T13:20:10.556090+00:00",
+  "raiz": "/home/hunter/projects/ingenieriaInversa",
+  "plataforma": "Linux-6.17.0-1033-oem-x86_64-with-glibc2.39",
+  "maquina": "x86_64",
+  "fuentes_sha256": {
+    "muestras/build/ejemplos.c": "cd356fb092a35109a872c3cf4c10f64983335b6f94ac54663c889e04ddf420a1",
+    "muestras/build/Makefile": "1e460e814f553601928b19015f37e9d26a67decf8f9bef2683d30f5cd51b5877",
+    "Libro/laboratorios/P1/controles.c": "48a25e230336f42fc4dd5d80b6b912762c50050a26e2b0880d49158008396733",
+    "Libro/laboratorios/P1/reproducir.py": "5d109f2b9cfc8935fe95bf8b00c1ea70c784e0fd4764b9bda362f28b8b3a8428",
+    "practicas/P1-c-a-asm/enunciado.md": "fd04fdea37829a6488da6ee7b8ef10d5e2cdc0d4a7c0c329ebd7934045bd4f2d",
+    "practicas/P1-c-a-asm/solucion.md": "c75f3fcbb4db1c2ffef88081cd6ac6c2168c77b2df3757b8abd0ee23fc0d2b2c",
+    "practicas/P1-c-a-asm/enunciado.tex": "d0c4cb04426ec91cf983f184addf1c2e39fdaf3392d33f358cacfbfa4129164a",
+    "practicas/P1-c-a-asm/solucion.tex": "3835d03a25616bf56f789ced98abee8f8bbeb41fba6ab5e0124175388965f126",
+    "practicas/P1-c-a-asm/Practica1.pdf": "3f57f833837e38cc7fd58133171b476a05a70a92d2e8b1871247c480f21bc65b",
+    "practicas/P1-c-a-asm/SolucionP1.pdf": "e7b82dbd5e418e79be3c7f0215d7c53cae252fbc90848b1ebe77c5fac7ef826a"
+  },
+  "comandos": [
+    {
+      "nombre": "revision",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "version-gcc",
+      "argv": [
+        "gcc",
+        "--version"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "version-make",
+      "argv": [
+        "make",
+        "--version"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "version-objdump",
+      "argv": [
+        "objdump",
+        "--version"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "version-readelf",
+      "argv": [
+        "readelf",
+        "--version"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "version-file",
+      "argv": [
+        "file",
+        "--version"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "gcc-target",
+      "argv": [
+        "gcc",
+        "-dumpmachine"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "gcc-configuracion",
+      "argv": [
+        "gcc",
+        "-v"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "compilacion",
+      "argv": [
+        "make",
+        "-B",
+        "-C",
+        "muestras/build",
+        "x86",
+        "OUT=/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "file-dbg",
+      "argv": [
+        "file",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-dbg"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "elf-dbg",
+      "argv": [
+        "readelf",
+        "-h",
+        "-S",
+        "-W",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-dbg"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "file-opt",
+      "argv": [
+        "file",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-opt"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "elf-opt",
+      "argv": [
+        "readelf",
+        "-h",
+        "-S",
+        "-W",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-opt"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "file-strip-dbg",
+      "argv": [
+        "file",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-strip-dbg"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "elf-strip-dbg",
+      "argv": [
+        "readelf",
+        "-h",
+        "-S",
+        "-W",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-strip-dbg"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "file-strip-opt",
+      "argv": [
+        "file",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-strip-opt"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "elf-strip-opt",
+      "argv": [
+        "readelf",
+        "-h",
+        "-S",
+        "-W",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-strip-opt"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "funcion_retorno-O0",
+      "argv": [
+        "objdump",
+        "-d",
+        "-M",
+        "intel",
+        "--disassemble=funcion_retorno",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-dbg"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "funcion_if-O0",
+      "argv": [
+        "objdump",
+        "-d",
+        "-M",
+        "intel",
+        "--disassemble=funcion_if",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-dbg"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "funcion_bucle-O0",
+      "argv": [
+        "objdump",
+        "-d",
+        "-M",
+        "intel",
+        "--disassemble=funcion_bucle",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-dbg"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "funcion_suma-O0",
+      "argv": [
+        "objdump",
+        "-d",
+        "-M",
+        "intel",
+        "--disassemble=funcion_suma",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-dbg"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "funcion_llamada_con_argumentos-O0",
+      "argv": [
+        "objdump",
+        "-d",
+        "-M",
+        "intel",
+        "--disassemble=funcion_llamada_con_argumentos",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-dbg"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "main-O0",
+      "argv": [
+        "objdump",
+        "-d",
+        "-M",
+        "intel",
+        "--disassemble=main",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-dbg"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "ejecucion-O0-correcta",
+      "argv": [
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-dbg",
+        "R3v3rs1ng_UAL"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "ejecucion-O0-incorrecta",
+      "argv": [
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-dbg",
+        "entrada-no-valida"
+      ],
+      "codigo": 1,
+      "esperado": 1
+    },
+    {
+      "nombre": "ejecucion-O0-sin-argumento",
+      "argv": [
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-dbg"
+      ],
+      "codigo": 1,
+      "esperado": 1
+    },
+    {
+      "nombre": "compilar-objeto-O0",
+      "argv": [
+        "gcc",
+        "-O0",
+        "-g",
+        "-Dmain=p1_main",
+        "-c",
+        "/home/hunter/projects/ingenieriaInversa/muestras/build/ejemplos.c",
+        "-o",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-control-O0.o"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "enlazar-controles-O0",
+      "argv": [
+        "gcc",
+        "-O0",
+        "-g",
+        "/home/hunter/projects/ingenieriaInversa/Libro/laboratorios/P1/controles.c",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-control-O0.o",
+        "-o",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/controles-O0"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "controles-O0",
+      "argv": [
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/controles-O0"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "funcion_retorno-O2",
+      "argv": [
+        "objdump",
+        "-d",
+        "-M",
+        "intel",
+        "--disassemble=funcion_retorno",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-opt"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "funcion_if-O2",
+      "argv": [
+        "objdump",
+        "-d",
+        "-M",
+        "intel",
+        "--disassemble=funcion_if",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-opt"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "funcion_bucle-O2",
+      "argv": [
+        "objdump",
+        "-d",
+        "-M",
+        "intel",
+        "--disassemble=funcion_bucle",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-opt"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "funcion_suma-O2",
+      "argv": [
+        "objdump",
+        "-d",
+        "-M",
+        "intel",
+        "--disassemble=funcion_suma",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-opt"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "funcion_llamada_con_argumentos-O2",
+      "argv": [
+        "objdump",
+        "-d",
+        "-M",
+        "intel",
+        "--disassemble=funcion_llamada_con_argumentos",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-opt"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "main-O2",
+      "argv": [
+        "objdump",
+        "-d",
+        "-M",
+        "intel",
+        "--disassemble=main",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-opt"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "ejecucion-O2-correcta",
+      "argv": [
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-opt",
+        "R3v3rs1ng_UAL"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "ejecucion-O2-incorrecta",
+      "argv": [
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-opt",
+        "entrada-no-valida"
+      ],
+      "codigo": 1,
+      "esperado": 1
+    },
+    {
+      "nombre": "ejecucion-O2-sin-argumento",
+      "argv": [
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-x86-opt"
+      ],
+      "codigo": 1,
+      "esperado": 1
+    },
+    {
+      "nombre": "compilar-objeto-O2",
+      "argv": [
+        "gcc",
+        "-O2",
+        "-g",
+        "-Dmain=p1_main",
+        "-c",
+        "/home/hunter/projects/ingenieriaInversa/muestras/build/ejemplos.c",
+        "-o",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-control-O2.o"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "enlazar-controles-O2",
+      "argv": [
+        "gcc",
+        "-O2",
+        "-g",
+        "/home/hunter/projects/ingenieriaInversa/Libro/laboratorios/P1/controles.c",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/ejemplos-control-O2.o",
+        "-o",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/controles-O2"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "controles-O2",
+      "argv": [
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/laboratorios/P1/2026-10-19-E01/binarios/controles-O2"
+      ],
+      "codigo": 0,
+      "esperado": 0
+    }
+  ],
+  "estado": "ejecutado; controles correctos",
+  "revision_base": "a5f592b08550339fc24ea7db9936fe033bb1a4aa",
+  "fin_utc": "2026-10-19T13:20:10.915795+00:00",
+  "artefactos_sha256": {
+    "binarios/controles-O0": "972da74cae0ffb6088810483fae599f6f2217399a0aa9eab9bc7a1ecea7a9aa9",
+    "binarios/controles-O2": "a4882ddd589b5254b16ad943139ee72e08185f81fc01997b5e5164bdc05a3c71",
+    "binarios/ejemplos-control-O0.o": "32d28d75dd72ed91c4faffd570a6025d36e0ff9bad3db27edb3288cd2ee51c33",
+    "binarios/ejemplos-control-O2.o": "5abaff3e96cfb42759fd2c0c216bcc866eeb90f76dd74129bc9246e17b332475",
+    "binarios/ejemplos-x86-dbg": "c3aa1ec0ae35486cab16c299debd04f204f5be2bf3b9028239f57856e2e88783",
+    "binarios/ejemplos-x86-opt": "f9d880367baa0b99145b2e91190d07f04710d92a48b9fa535b0ef1a655254611",
+    "binarios/ejemplos-x86-strip-dbg": "e980b01180af6cea6c2ff78d96e466d07563e0602fa47a9985d1061ca09b4c2f",
+    "binarios/ejemplos-x86-strip-opt": "dbddb822a813e72e078597e27f7d6d3990670d7096c94b9a63a47fd1f8b0269c",
+    "comandos.sh": "24ca9745191d23eef6fadd13435742a4fd581b6c8b0fe288f8440b5cbef9cd9b",
+    "compilacion.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compilacion.txt": "14e2b76f881ea5904008e11fd523e0f62cc4664710ec904365f5da80b450db18",
+    "compilar-objeto-O0.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compilar-objeto-O0.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compilar-objeto-O2.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compilar-objeto-O2.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "controles-O0.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "controles-O0.txt": "f390dc282a21de8a6120467721445b1ba0160cd54092c5bd0ee57f4f87c6f474",
+    "controles-O2.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "controles-O2.txt": "f390dc282a21de8a6120467721445b1ba0160cd54092c5bd0ee57f4f87c6f474",
+    "ejecucion-O0-correcta.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ejecucion-O0-correcta.txt": "741e0aa2f951b3a701125e456722e4a2a9be073eab278147e1c6058dfcdb671b",
+    "ejecucion-O0-incorrecta.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ejecucion-O0-incorrecta.txt": "639a1978e8a594c192dd8afe109ccea9066ce1968b4b989cc46acf3f2d2fa766",
+    "ejecucion-O0-sin-argumento.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ejecucion-O0-sin-argumento.txt": "e2346eb840e55f6bd8c110e7b5b84eb348b561174da6d25ef80a28d653440215",
+    "ejecucion-O2-correcta.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ejecucion-O2-correcta.txt": "741e0aa2f951b3a701125e456722e4a2a9be073eab278147e1c6058dfcdb671b",
+    "ejecucion-O2-incorrecta.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ejecucion-O2-incorrecta.txt": "639a1978e8a594c192dd8afe109ccea9066ce1968b4b989cc46acf3f2d2fa766",
+    "ejecucion-O2-sin-argumento.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ejecucion-O2-sin-argumento.txt": "37b81035ef2d006382ed9444a743e0aa78d1ca9239a838b8077d09d194d3c5bc",
+    "elf-dbg.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "elf-dbg.txt": "1ce0366be16c696f3e1273941515b5137ffd6ce56850ca31bc4b961dfd1b7b44",
+    "elf-opt.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "elf-opt.txt": "3cd13413989d061f975e1e539e7ad585406c120875dc86a4a0e28c0af8367fe6",
+    "elf-strip-dbg.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "elf-strip-dbg.txt": "6e5d6e51d6b106b10e27348133db28d0a99535ae8c50a7721a61942cd770c904",
+    "elf-strip-opt.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "elf-strip-opt.txt": "d1e168e760daf79aea09bd1adc5dc53e2f2dbcb53064f40a64952606240b2a3b",
+    "enlazar-controles-O0.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "enlazar-controles-O0.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "enlazar-controles-O2.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "enlazar-controles-O2.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "file-dbg.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "file-dbg.txt": "c7908999a4ceb43b8c5a07789dfad39c5550ce7076f65a8f4454f50115b067c0",
+    "file-opt.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "file-opt.txt": "d15420c318f5399d496780223e064ac3e0d2f4c5d278f74a0dfee7e55e510a6a",
+    "file-strip-dbg.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "file-strip-dbg.txt": "ca19d955169f5d134fe0cdec7164301c7c4cdd7cd5981f4bcf70404827064063",
+    "file-strip-opt.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "file-strip-opt.txt": "d649afd34c3de263b8403c0ba4b6915bc52d77980bfbee40b9c61f0bc30bc3e3",
+    "funcion_bucle-O0.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "funcion_bucle-O0.txt": "58eef348a1c37a24110858da3155b166e046930f4a4d93fb2306ba190d5395ea",
+    "funcion_bucle-O2.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "funcion_bucle-O2.txt": "249129e376a01f17de31ef2ef5c5917d194ba9b16ac7bc73a8156df47f39cd64",
+    "funcion_if-O0.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "funcion_if-O0.txt": "951341ecefdd998b9860740e0657a600d91628b8222215b78385e02b9e3a1718",
+    "funcion_if-O2.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "funcion_if-O2.txt": "3f696c4c77ce86637e31286c14838158575629235a43f82aac5f666bda805d80",
+    "funcion_llamada_con_argumentos-O0.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "funcion_llamada_con_argumentos-O0.txt": "bda7b12f157e9cb41f81bd4f89a6ead902650722ee390be24e37a088bdd0db77",
+    "funcion_llamada_con_argumentos-O2.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "funcion_llamada_con_argumentos-O2.txt": "08b3296369c83797262c744dc18c898f2c7f620cf3dd92980fc7bedf171fb57c",
+    "funcion_retorno-O0.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "funcion_retorno-O0.txt": "af325c52ede4a273774744f69489e0d342a51f9d8d215f02630348fdbae64ce2",
+    "funcion_retorno-O2.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "funcion_retorno-O2.txt": "0bc57e5ade8747aa8c285293141f03fb774f5a14fd6ed31f4c27db116f2c55cf",
+    "funcion_suma-O0.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "funcion_suma-O0.txt": "232307ce084a1a82b24c26dffc5f33e16fef0c49b4ee75b172672e5c1d8fb2da",
+    "funcion_suma-O2.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "funcion_suma-O2.txt": "df4fed2d129f4f0a3d45d4bef0d0e19eac2c163bdf9248e7f46683c3c9366adc",
+    "gcc-configuracion.stderr.txt": "9c2290f6dbcb6ad1230f0c5d4c7e46868f334dd6aa4fbb2cd235c08386a214ff",
+    "gcc-configuracion.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gcc-target.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gcc-target.txt": "08cababdf891ccbf96eb376f1e84f279f70302fb13d84e5f98637becdfc6d989",
+    "main-O0.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "main-O0.txt": "abfdb70a905c4656cdae04c415d0e731c3466cab8d09704cecca0a2bba3f3706",
+    "main-O2.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "main-O2.txt": "d99cdbe6da5d770e816cd5147a9015757d579bd94a62892363033d98f049c468",
+    "revision.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "revision.txt": "4d18d44a1ec469f4e148a635150828f1086550c4fe35b99536d905a4e75844aa",
+    "version-file.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "version-file.txt": "efc7f224f6909cd1e420e368f454c3ea3b89a5dd6c02d0ffa7ed949d49e9dd68",
+    "version-gcc.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "version-gcc.txt": "8497f84b2b8334c413d9c6166bd39d009ba55d2ff60a8f23e66dfa5819c2b048",
+    "version-make.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "version-make.txt": "8ee498ee2fc27e8dcdf99191b454077df95e3840d841ec94321748b6d7f36819",
+    "version-objdump.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "version-objdump.txt": "8feb2cb2830955a0c282e6abca2b512dcf52cb9380e6b0263a481bf1c6349d8d",
+    "version-readelf.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "version-readelf.txt": "6aca4321453ac381865f3d353ea7896b150c05026483cb9db0047eee6916723d"
+  }
+}

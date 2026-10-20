@@ -1,0 +1,130 @@
+{
+  "comando": [
+    "gcc",
+    "-std=c11",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Werror",
+    "-O2",
+    "-s",
+    "-fPIE",
+    "-pie",
+    "-o",
+    "/home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/alumnado/original",
+    "ejemplos.c"
+  ],
+  "cwd": "/home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/docente",
+  "operaciones": [
+    {
+      "id": "empaquetar",
+      "comando": [
+        "/tmp/p5-upx-root/usr/bin/upx-ucl",
+        "-9",
+        "-o",
+        "/home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/alumnado/empaquetado",
+        "/home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/alumnado/original"
+      ],
+      "retorno": 0,
+      "stdout": "                       Ultimate Packer for eXecutables\n                          Copyright (C) 1996 - 2024\nUPX 4.2.2       Markus Oberhumer, Laszlo Molnar & John Reiser    Jan 3rd 2024\n\n        File size         Ratio      Format      Name\n   --------------------   ------   -----------   -----------\n     14472 ->      5844   40.38%   linux/amd64   empaquetado\n\nPacked 1 file.\n",
+      "stderr": ""
+    },
+    {
+      "id": "test",
+      "comando": [
+        "/tmp/p5-upx-root/usr/bin/upx-ucl",
+        "-t",
+        "/home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/alumnado/empaquetado"
+      ],
+      "retorno": 0,
+      "stdout": "                       Ultimate Packer for eXecutables\n                          Copyright (C) 1996 - 2024\nUPX 4.2.2       Markus Oberhumer, Laszlo Molnar & John Reiser    Jan 3rd 2024\n\ntesting /home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/alumnado/empaquetado [OK]\n\nTested 1 file.\n",
+      "stderr": ""
+    },
+    {
+      "id": "listar",
+      "comando": [
+        "/tmp/p5-upx-root/usr/bin/upx-ucl",
+        "-l",
+        "/home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/alumnado/empaquetado"
+      ],
+      "retorno": 0,
+      "stdout": "                       Ultimate Packer for eXecutables\n                          Copyright (C) 1996 - 2024\nUPX 4.2.2       Markus Oberhumer, Laszlo Molnar & John Reiser    Jan 3rd 2024\n\n        File size         Ratio      Format      Name\n   --------------------   ------   -----------   -----------\n     14472 ->      5844   40.38%   linux/amd64   /home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/alumnado/empaquetado\n",
+      "stderr": ""
+    },
+    {
+      "id": "desempaquetar",
+      "comando": [
+        "/tmp/p5-upx-root/usr/bin/upx-ucl",
+        "-d",
+        "-o",
+        "/home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/docente/recuperado",
+        "/home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/alumnado/empaquetado"
+      ],
+      "retorno": 0,
+      "stdout": "                       Ultimate Packer for eXecutables\n                          Copyright (C) 1996 - 2024\nUPX 4.2.2       Markus Oberhumer, Laszlo Molnar & John Reiser    Jan 3rd 2024\n\n        File size         Ratio      Format      Name\n   --------------------   ------   -----------   -----------\n     23231 <-      5844   25.16%   linux/amd64   recuperado\n\nUnpacked 1 file.\n",
+      "stderr": ""
+    },
+    {
+      "id": "cmp",
+      "comando": [
+        "cmp",
+        "-s",
+        "/home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/alumnado/original",
+        "/home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/docente/recuperado"
+      ],
+      "retorno": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "id": "UPX-01",
+  "version": "1.0",
+  "creacion_utc": "2026-09-28T01:44:09.784508+00:00",
+  "procedencia": "Fuente propio ejemplos.c del curso; empaquetado sin modificar mediante UPX -9",
+  "uso": "Código propio: uso y redistribución en el contexto docente del curso; avisos del stub en licencias/",
+  "fuente_sha256": "cd356fb092a35109a872c3cf4c10f64983335b6f94ac54663c889e04ddf420a1",
+  "herramienta": {
+    "version": "upx 4.2.2\nUCL data compression library 1.03\nzlib data compression library 1.3.0.1-motley\nLZMA SDK version 4.43\ndoctest C++ testing framework version 2.4.11\nCopyright (C) 1996-2024 Markus Franz Xaver Johannes Oberhumer\nCopyright (C) 1996-2024 Laszlo Molnar\nCopyright (C) 2000-2024 John F. Reiser\nCopyright (C) 2002-2024 Jens Medoch\nCopyright (C) 1995-2023 Jean-loup Gailly and Mark Adler\nCopyright (C) 1999-2006 Igor Pavlov\nCopyright (C) 2016-2023 Viktor Kirilov\nUPX comes with ABSOLUTELY NO WARRANTY; for details type 'upx-ucl -L'.",
+    "sha256": "958c526d02c792d491fbfe85eba8793c453b52acd79e3577867f5d7987ecdb29",
+    "paquete": {
+      "nombre": "upx-ucl_4.2.2-3_amd64.deb",
+      "sha256": "1182b49f5e28da59ce6cbdaaeda2d34f42da1054bf6e8859ffee7d17455b9b37",
+      "control": "Package: upx-ucl\nVersion: 4.2.2-3\nArchitecture: amd64\nDepends: libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 13.1)"
+    }
+  },
+  "herramientas": {
+    "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "ld": "GNU ld (GNU Binutils for Ubuntu) 2.42",
+    "readelf": "GNU readelf (GNU Binutils for Ubuntu) 2.42",
+    "cmp": "cmp (GNU diffutils) 3.10"
+  },
+  "libc_build": "glibc 2.39",
+  "requisitos_glibc": "\nVersion symbols section '.gnu.version' contains 8 entries:\n Addr: 0x0000000000000540  Offset: 0x00000540  Link: 6 (.dynsym)\n  000:   0 (*local*)       2 (GLIBC_2.34)    1 (*global*)      3 (GLIBC_2.2.5)\n  004:   1 (*global*)      4 (GLIBC_2.3.4)   1 (*global*)      3 (GLIBC_2.2.5)\n\nVersion needs section '.gnu.version_r' contains 1 entry:\n Addr: 0x0000000000000550  Offset: 0x00000550  Link: 7 (.dynstr)\n  000000: Version: 1  File: libc.so.6  Cnt: 3\n  0x0010:   Name: GLIBC_2.3.4  Flags: none  Version: 4\n  0x0020:   Name: GLIBC_2.2.5  Flags: none  Version: 3\n  0x0030:   Name: GLIBC_2.34  Flags: none  Version: 2\n",
+  "ficheros": [
+    {
+      "nombre": "original",
+      "tamano": 14472,
+      "sha256": "125c09bcfecf485febfe7cb74787dc84000263edc4f798d1c12905067f93eaf0",
+      "tipo_elf": 3,
+      "entry": "0x1150",
+      "program_headers": 13,
+      "section_headers": 29,
+      "cadena_clave_literal": true
+    },
+    {
+      "nombre": "empaquetado",
+      "tamano": 5844,
+      "sha256": "184e21256a3816e44d0204070b376811eac295c0f179d0dda4ee1bf56498f079",
+      "tipo_elf": 3,
+      "entry": "0x58a0",
+      "program_headers": 3,
+      "section_headers": 0,
+      "cadena_clave_literal": true
+    }
+  ],
+  "limites": [
+    "El alumnado genera recuperado; la copia de control está en el paquete docente",
+    "UPX no se incluye: preparar la versión manifestada antes de clase",
+    "Diez entradas contrastadas; no prueba equivalencia universal ni valida anti-debug"
+  ]
+}

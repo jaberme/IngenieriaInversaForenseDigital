@@ -1,0 +1,326 @@
+{
+  "total_anunciado": 207,
+  "tools": [
+    {
+      "name": "list_procedures",
+      "inputSchema": {
+        "type": "object",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "document": {
+            "description": "The active target's provider document name; use open_binary to switch targets",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "examples": [
+          {}
+        ]
+      }
+    },
+    {
+      "name": "procedure_assembly",
+      "inputSchema": {
+        "type": "object",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "procedure": {
+            "type": "string",
+            "description": "The procedure name or address"
+          },
+          "document": {
+            "description": "The active target's provider document name; use open_binary to switch targets",
+            "type": "string"
+          }
+        },
+        "required": [
+          "procedure"
+        ],
+        "additionalProperties": false,
+        "examples": [
+          {
+            "procedure": "main"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resolve_containing_procedure",
+      "inputSchema": {
+        "type": "object",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "address": {
+            "type": "string",
+            "description": "A provider-normalized address; default memory uses 0x-prefixed hexadecimal"
+          },
+          "document": {
+            "description": "The active target's provider document name; use open_binary to switch targets",
+            "type": "string"
+          }
+        },
+        "required": [
+          "address"
+        ],
+        "additionalProperties": false,
+        "examples": [
+          {
+            "address": "0x1000"
+          }
+        ]
+      }
+    },
+    {
+      "name": "search_strings",
+      "inputSchema": {
+        "type": "object",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "pattern": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The literal text or regex pattern to search for"
+          },
+          "mode": {
+            "default": "literal",
+            "type": "string",
+            "enum": [
+              "literal",
+              "regex"
+            ],
+            "description": "Operation mode that selects the requested behavior."
+          },
+          "case_sensitive": {
+            "default": false,
+            "description": "Whether to match case",
+            "type": "boolean"
+          },
+          "document": {
+            "description": "The document name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "pattern"
+        ],
+        "additionalProperties": false,
+        "examples": [
+          {
+            "pattern": "authorization failed",
+            "mode": "literal",
+            "case_sensitive": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "xrefs",
+      "inputSchema": {
+        "type": "object",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "document": {
+            "description": "The active target's provider document name; use open_binary to switch targets",
+            "type": "string"
+          },
+          "address": {
+            "type": "string",
+            "description": "A provider-normalized address; default memory uses 0x-prefixed hexadecimal"
+          }
+        },
+        "additionalProperties": false,
+        "examples": [
+          {}
+        ]
+      }
+    },
+    {
+      "name": "binary_overview",
+      "inputSchema": {
+        "type": "object",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {},
+        "additionalProperties": false,
+        "examples": [
+          {}
+        ]
+      }
+    },
+    {
+      "name": "analyze_function",
+      "inputSchema": {
+        "type": "object",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "procedure": {
+            "type": "string",
+            "description": "A procedure name or address"
+          }
+        },
+        "required": [
+          "procedure"
+        ],
+        "additionalProperties": false,
+        "examples": [
+          {
+            "procedure": "main"
+          }
+        ]
+      }
+    },
+    {
+      "name": "open_binary",
+      "inputSchema": {
+        "type": "object",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[^\\x00]*$",
+            "description": "Absolute local filesystem path for the analysis target; relative paths are rejected."
+          },
+          "format": {
+            "description": "Explicit headerless interpretation: dos-com or raw-binary. Omission preserves header-based detection.",
+            "type": "string",
+            "enum": [
+              "dos-com",
+              "raw-binary"
+            ]
+          },
+          "architecture": {
+            "description": "Caller-supplied CPU family. Required with format=raw-binary; rejected otherwise.",
+            "type": "string",
+            "enum": [
+              "6502",
+              "x86",
+              "x86_64",
+              "arm",
+              "arm64",
+              "m68k"
+            ]
+          },
+          "entry_point": {
+            "description": "Caller-supplied load and entry address (0xhex). File offset 0 is mapped here. Required with format=raw-binary; rejected otherwise.",
+            "type": "string",
+            "pattern": "^0x[0-9A-Fa-f]{1,16}$"
+          },
+          "provider_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "auto"
+              },
+              {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-z][a-z0-9\\x2d]*$"
+              }
+            ],
+            "description": "Exact deep-analysis provider ID, or automatic selection when omitted."
+          },
+          "snapshot_path": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[^\\x00]*$",
+            "description": "Absolute local filesystem path for the analysis snapshot; relative paths are rejected."
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "additionalProperties": false,
+        "examples": [
+          {
+            "path": "/tmp/fixture"
+          }
+        ]
+      }
+    },
+    {
+      "name": "close_binary",
+      "inputSchema": {
+        "type": "object",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "snapshot_path": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[^\\x00]*$",
+            "description": "Absolute local filesystem path for the analysis snapshot; relative paths are rejected."
+          },
+          "overwrite": {
+            "default": false,
+            "type": "boolean",
+            "description": "Whether an existing destination may be replaced."
+          }
+        },
+        "additionalProperties": false,
+        "examples": [
+          {
+            "overwrite": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "binary_session",
+      "inputSchema": {
+        "type": "object",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "expected_package_version": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Expected package version used to reject stale or mismatched input."
+          },
+          "expected_catalog_digest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "Expected catalog digest used to reject stale or mismatched input."
+          },
+          "expected_server_path": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[^\\x00]*$",
+            "description": "Absolute local filesystem path expected for the running server; relative paths are rejected."
+          }
+        },
+        "additionalProperties": false,
+        "examples": [
+          {}
+        ]
+      }
+    },
+    {
+      "name": "export_evidence_bundle",
+      "inputSchema": {
+        "type": "object",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[^\\x00]*$",
+            "description": "Absolute local filesystem path for the exported evidence bundle; relative paths are rejected."
+          },
+          "overwrite": {
+            "default": false,
+            "type": "boolean",
+            "description": "Whether an existing destination may be replaced."
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "additionalProperties": false,
+        "examples": [
+          {
+            "path": "/tmp/evidence.json",
+            "overwrite": false
+          }
+        ]
+      }
+    }
+  ]
+}

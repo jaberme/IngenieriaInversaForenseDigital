@@ -1,0 +1,334 @@
+{
+  "sha256": "ed7640c92c67e0308d8a7c2edc21f3d7c25f2c435a8ed17cde23cdcd0eac5015",
+  "tamano": 39936,
+  "machine": 34404,
+  "magic": 523,
+  "pe_offset": 128,
+  "timestamp": 0,
+  "coff_symbol_pointer": 0,
+  "coff_symbols": 0,
+  "characteristics": 558,
+  "image_base": 5368709120,
+  "entry_rva": 5136,
+  "subsystem": 3,
+  "dll_characteristics": 352,
+  "section_alignment": 4096,
+  "file_alignment": 512,
+  "size_image": 69632,
+  "size_headers": 1024,
+  "secciones": [
+    {
+      "nombre": ".text",
+      "virtual_size": 27784,
+      "rva": 4096,
+      "raw_size": 28160,
+      "raw_offset": 1024,
+      "characteristics": 1610612832
+    },
+    {
+      "nombre": ".data",
+      "virtual_size": 192,
+      "rva": 32768,
+      "raw_size": 512,
+      "raw_offset": 29184,
+      "characteristics": 3221225536
+    },
+    {
+      "nombre": ".rdata",
+      "virtual_size": 3584,
+      "rva": 36864,
+      "raw_size": 3584,
+      "raw_offset": 29696,
+      "characteristics": 1073741888
+    },
+    {
+      "nombre": ".pdata",
+      "virtual_size": 1200,
+      "rva": 40960,
+      "raw_size": 1536,
+      "raw_offset": 33280,
+      "characteristics": 1073741888
+    },
+    {
+      "nombre": ".xdata",
+      "virtual_size": 1324,
+      "rva": 45056,
+      "raw_size": 1536,
+      "raw_offset": 34816,
+      "characteristics": 1073741888
+    },
+    {
+      "nombre": ".bss",
+      "virtual_size": 2944,
+      "rva": 49152,
+      "raw_size": 0,
+      "raw_offset": 0,
+      "characteristics": 3221225600
+    },
+    {
+      "nombre": ".idata",
+      "virtual_size": 1744,
+      "rva": 53248,
+      "raw_size": 2048,
+      "raw_offset": 36352,
+      "characteristics": 3221225536
+    },
+    {
+      "nombre": ".CRT",
+      "virtual_size": 96,
+      "rva": 57344,
+      "raw_size": 512,
+      "raw_offset": 38400,
+      "characteristics": 3221225536
+    },
+    {
+      "nombre": ".tls",
+      "virtual_size": 16,
+      "rva": 61440,
+      "raw_size": 512,
+      "raw_offset": 38912,
+      "characteristics": 3221225536
+    },
+    {
+      "nombre": ".reloc",
+      "virtual_size": 132,
+      "rva": 65536,
+      "raw_size": 512,
+      "raw_offset": 39424,
+      "characteristics": 1107296320
+    }
+  ],
+  "imports": [
+    {
+      "dll": "KERNEL32.dll",
+      "simbolos": [
+        {
+          "nombre": "DeleteCriticalSection"
+        },
+        {
+          "nombre": "EnterCriticalSection"
+        },
+        {
+          "nombre": "GetLastError"
+        },
+        {
+          "nombre": "InitializeCriticalSection"
+        },
+        {
+          "nombre": "IsDBCSLeadByteEx"
+        },
+        {
+          "nombre": "LeaveCriticalSection"
+        },
+        {
+          "nombre": "MultiByteToWideChar"
+        },
+        {
+          "nombre": "SetUnhandledExceptionFilter"
+        },
+        {
+          "nombre": "Sleep"
+        },
+        {
+          "nombre": "TlsGetValue"
+        },
+        {
+          "nombre": "VirtualProtect"
+        },
+        {
+          "nombre": "VirtualQuery"
+        },
+        {
+          "nombre": "WideCharToMultiByte"
+        }
+      ]
+    },
+    {
+      "dll": "msvcrt.dll",
+      "simbolos": [
+        {
+          "nombre": "__C_specific_handler"
+        },
+        {
+          "nombre": "___lc_codepage_func"
+        },
+        {
+          "nombre": "___mb_cur_max_func"
+        },
+        {
+          "nombre": "__getmainargs"
+        },
+        {
+          "nombre": "__initenv"
+        },
+        {
+          "nombre": "__iob_func"
+        },
+        {
+          "nombre": "__set_app_type"
+        },
+        {
+          "nombre": "__setusermatherr"
+        },
+        {
+          "nombre": "_amsg_exit"
+        },
+        {
+          "nombre": "_cexit"
+        },
+        {
+          "nombre": "_commode"
+        },
+        {
+          "nombre": "_errno"
+        },
+        {
+          "nombre": "_fmode"
+        },
+        {
+          "nombre": "_initterm"
+        },
+        {
+          "nombre": "_lock"
+        },
+        {
+          "nombre": "_onexit"
+        },
+        {
+          "nombre": "_unlock"
+        },
+        {
+          "nombre": "abort"
+        },
+        {
+          "nombre": "calloc"
+        },
+        {
+          "nombre": "exit"
+        },
+        {
+          "nombre": "fprintf"
+        },
+        {
+          "nombre": "fputc"
+        },
+        {
+          "nombre": "free"
+        },
+        {
+          "nombre": "fwrite"
+        },
+        {
+          "nombre": "localeconv"
+        },
+        {
+          "nombre": "malloc"
+        },
+        {
+          "nombre": "memcpy"
+        },
+        {
+          "nombre": "memset"
+        },
+        {
+          "nombre": "signal"
+        },
+        {
+          "nombre": "strerror"
+        },
+        {
+          "nombre": "strlen"
+        },
+        {
+          "nombre": "strncmp"
+        },
+        {
+          "nombre": "vfprintf"
+        },
+        {
+          "nombre": "wcslen"
+        }
+      ]
+    }
+  ],
+  "directorios": [
+    [
+      0,
+      0
+    ],
+    [
+      53248,
+      1744
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      40960,
+      1200
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      65536,
+      132
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      37024,
+      40
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      53704,
+      392
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "entrada": {
+    "seccion": ".text",
+    "rva": 5136,
+    "va_preferida": 5368714256,
+    "offset": 2064,
+    "bytes": "55 48 89 e5 48 83 ec 20 48 8b 05 c1 83 00 00 c7"
+  },
+  "sin_bytes": [
+    {
+      "seccion": ".bss",
+      "rva": 49152,
+      "va_preferida": 5368758272
+    }
+  ]
+}

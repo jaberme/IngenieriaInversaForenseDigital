@@ -1,0 +1,23 @@
+{
+  "inferencias_nuevas": 0,
+  "registros_bundle": 2,
+  "operaciones": [
+    "analyze_function",
+    "procedure_assembly"
+  ],
+  "exportado_antes_del_cierre": true,
+  "comparacion": [
+    {
+      "operacion": "analyze_function",
+      "evidence_id_original": "ev_48c53081189edf456ee3516ed8d3cddf12d2cb43aa4ff291b94cc33aa778df7c",
+      "evidence_id_repetido": "ev_48c53081189edf456ee3516ed8d3cddf12d2cb43aa4ff291b94cc33aa778df7c",
+      "igualdad_json": true
+    },
+    {
+      "operacion": "procedure_assembly",
+      "evidence_id_original": "ev_2ec3d4fd0289fc5073429b9a51e375f01ff2a7ecada05577d1e0a8d0fc73b2ec",
+      "evidence_id_repetido": "ev_2ec3d4fd0289fc5073429b9a51e375f01ff2a7ecada05577d1e0a8d0fc73b2ec",
+      "igualdad_json": true
+    }
+  ]
+}

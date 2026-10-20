@@ -1,0 +1,19 @@
+{
+  "Q01-manifiesto.json": "500911a02a3a262cf11955278823fe327694f06bd8ed97f7fca93d9134ba5d35",
+  "Q01.tar.gz": "a5296f7dbdc0574ad4330f53d1395e1b7f51eda856ed268650b3fded0eb4ff43",
+  "Q02-manifiesto.json": "7aef377a162923fb76ee8e66ede4c78f4876d6e40cd821035e38366db2b14321",
+  "Q02.tar.gz": "e4c3cd5f4f5fbfa9296e61b65d0b7926b1515ed1d7fc476152f2e68bc79435e4",
+  "Q03-bundle-recuperado.json": "06bda630857d0e103114b637e3ee66553e8393f8f9305c3fa30effdbb109ffff",
+  "Q03-interpretacion-turno04.md": "c4c575aa1d6e3545cfbf5722eaffd3a3f6dee066f4dfbf92c7dcbaaba2573cba",
+  "Q03-manifiesto.json": "c487319130eccba4f4c6d2e5414fb6e2ea8160d92c12dde84275b5c26e6bac0b",
+  "Q03-respuesta-modelo-sin-revisar.md": "c10971736062e320cd3710cbfa75c3e03e78b163e7d37e7e626fcd049871b79d",
+  "Q03.tar.gz": "824854b50eb44c8ce77b70d216258ba7e70b51bac538b49c4d9ca74a480a0a0d",
+  "README.md": "54c9634410dd3dc7126988805200e57a803eadb42b8815f1b49bf09810813071",
+  "conservacion-manifiesto.json": "8246539057dce94add70cd396437c6edcee52d83d4859cecf2bd94dee2c65afd",
+  "conservacion-resultado.json": "c08f696ed6b8163d3f8bbe934a51d0c0d2c54ac21e080b032680bb942930d27f",
+  "conservacion.tar.gz": "3fd5d756edb92be42c5f79e41a9ad4ef9de9693804d0b19ce804c99edc84d5ea",
+  "humo.json": "4c1973f144eda645a76d86928d972bc4bfe56edb125183a931fe2acd5339b37a",
+  "ps.json": "5bd0be0ba0997298877f56a86e3e781c427535af384a2af207d18fb5c59aedf4",
+  "revision-del-analista.json": "1db8ec535d8b0acdf4dffb41c8d8e5dcb316535a76736fcec66b5d6fa366b692",
+  "show.json": "409ea0a90b52e652a304eadb7d064c9e40630adedf6190014294f93730fe6239"
+}

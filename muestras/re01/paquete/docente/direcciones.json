@@ -1,0 +1,27 @@
+[
+  {
+    "funcion": "load_config",
+    "va_elf": "0x0000000000001309",
+    "bytes": 850
+  },
+  {
+    "funcion": "load_record",
+    "va_elf": "0x000000000000165b",
+    "bytes": 743
+  },
+  {
+    "funcion": "transform_record",
+    "va_elf": "0x0000000000001942",
+    "bytes": 139
+  },
+  {
+    "funcion": "write_result",
+    "va_elf": "0x00000000000019cd",
+    "bytes": 163
+  },
+  {
+    "funcion": "main",
+    "va_elf": "0x0000000000001a70",
+    "bytes": 420
+  }
+]

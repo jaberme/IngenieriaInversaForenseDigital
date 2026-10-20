@@ -1,0 +1,9 @@
+{
+  "version": "upx 4.2.2\nUCL data compression library 1.03\nzlib data compression library 1.3.0.1-motley\nLZMA SDK version 4.43\ndoctest C++ testing framework version 2.4.11\nCopyright (C) 1996-2024 Markus Franz Xaver Johannes Oberhumer\nCopyright (C) 1996-2024 Laszlo Molnar\nCopyright (C) 2000-2024 John F. Reiser\nCopyright (C) 2002-2024 Jens Medoch\nCopyright (C) 1995-2023 Jean-loup Gailly and Mark Adler\nCopyright (C) 1999-2006 Igor Pavlov\nCopyright (C) 2016-2023 Viktor Kirilov\nUPX comes with ABSOLUTELY NO WARRANTY; for details type 'upx-ucl -L'.",
+  "sha256": "958c526d02c792d491fbfe85eba8793c453b52acd79e3577867f5d7987ecdb29",
+  "paquete": {
+    "nombre": "upx-ucl_4.2.2-3_amd64.deb",
+    "sha256": "1182b49f5e28da59ce6cbdaaeda2d34f42da1054bf6e8859ffee7d17455b9b37",
+    "control": "Package: upx-ucl\nVersion: 4.2.2-3\nArchitecture: amd64\nDepends: libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 13.1)"
+  }
+}

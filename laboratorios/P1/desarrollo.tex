@@ -1,0 +1,193 @@
+\section{Práctica resuelta: del fuente a una observación verificable}
+\label{sec:p1-verificada}
+
+La pregunta de esta práctica es concreta: ¿cómo reconocemos el mismo cálculo
+cuando cambia la forma de implementarlo? Usaremos el banco
+\material{muestras/build/ejemplos.c}, cuyo fuente puede consultarse para contrastar la interpretación. El propósito
+es aprender a justificar una lectura del ensamblador y contrastarla con ejecución.
+La identificación del binario y la explicación del resultado son partes del mismo trabajo.
+
+\subsection{Entradas, predicciones y condiciones del experimento}
+
+Se realizaron dos ejecuciones, E01 y E02, en Linux
+x86-64 con GCC 13.3.0 de Ubuntu y GNU Binutils 2.42. Cada una reconstruyó las
+cuatro variantes del Makefile original en un directorio nuevo, conservando sus
+opciones: \codigo{-O0 -g}, \codigo{-O2 -g}, \codigo{-O0 -s} y
+\codigo{-O2 -s}. Los registros están en
+\carpetamaterial{laboratorios/P1/registros/}; las huellas completas permiten identificar
+los artefactos. Las dos compilaciones dieron los mismos hashes en este entorno;
+esa observación no promete identidad binaria entre equipos o versiones.
+
+Antes de ejecutar, se fijaron los resultados esperados en
+\material{laboratorios/P1/controles.c}. Para el bucle se seleccionaron casos
+que distinguen entrada vacía, signo, iteraciones y frontera sin desbordamiento:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}r>{\raggedleft\arraybackslash}p{38mm}>{\raggedright\arraybackslash}X@{}}
+\toprule
+Entrada $n$ & Retorno previsto y observado & Razón de la elección\\
+\midrule
+$-1$ & 0 & La comparación con signo impide entrar.\\
+0 & 0 & Ninguna iteración.\\
+1 & 0 & Una iteración que suma cero.\\
+3 & 3 & Coinciden suma e índice final; por sí sola no distingue ambas hipótesis.\\
+4 & 6 & La suma difiere del índice final, que vale 4.\\
+10 & 45 & Caso central del enunciado.\\
+65\,536 & 2\,147\,450\,880 & Último entero positivo cuyo sumatorio cabe en \codigo{int} de 32 bits.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+El ejecutable original solo llama al bucle con 10. Por tanto, ejecutarlo con una
+contraseña diferente no comprueba los demás valores de $n$. Para contrastarlos se
+compiló un segundo objeto del mismo fuente, renombrando únicamente \codigo{main}
+con \codigo{-Dmain=p1\_main}, y se enlazó con el programa de controles en otra
+unidad de traducción, sin LTO. Los valores se obtuvieron mediante llamadas a las
+funciones compiladas con cada nivel. Las direcciones analizadas abajo pertenecen
+al ejecutable original, no a ese programa auxiliar.
+
+Cada nivel superó 24 controles: siete del bucle, cinco del condicional, cuatro de
+retornos y llamadas, cuatro de estructura y cuatro de orden de bytes. E02 repitió
+las compilaciones y confirmó los mismos resultados de los controles: 96 comprobaciones en total.
+Es una reproducción local por el mismo procedimiento, no una validación independiente.
+
+\subsection{Leer el bucle sin optimizar}
+
+Este es el cuerpo obtenido con \codigo{objdump -d -M intel} para
+\codigo{funcion\_bucle} en E01, variante \codigo{dbg}. Se mantienen las direcciones
+de enlace y las instrucciones; se omiten las columnas de bytes y las cabeceras
+de secciones vacías. Aún no se ha observado una dirección de carga en un proceso.
+Las opciones de selección de función y sintaxis se documentan en el manual
+de Binutils 2.42~\parencite[apartado \emph{objdump}]{binutils242objdump}.
+
+\begin{bloquecodigo}
+\lstinputlisting[style=asm,basicstyle=\ttfamily\footnotesize]{laboratorios/P1/extractos/bucle-O0.asm}
+\end{bloquecodigo}
+
+El argumento \codigo{n} llega en \codigo{edi} y se guarda en
+\codigo{[rbp-0x14]}; los ceros inicializan la suma en \codigo{[rbp-0x8]} y el
+índice en \codigo{[rbp-0x4]}. Se infieren esas funciones por sus escrituras y
+usos posteriores, contrastados aquí con el fuente. Los offsets no son nombres ni
+posiciones que deban mantenerse en otra compilación.
+
+El salto de \codigo{0x11db} lleva primero a la condición: esta disposición
+permite devolver cero sin ejecutar el cuerpo. En \codigo{0x11ea}, \codigo{cmp}
+establece los flags de $i-n$; \codigo{jl} vuelve al cuerpo si $i<n$, con signo.
+El cuerpo carga cuatro bytes del índice, los añade a los cuatro de la suma y
+después incrementa el índice. La carga de \codigo{0x11ef} entrega la suma en
+\codigo{eax} antes de restaurar \codigo{rbp} y retornar.
+
+El grafo correspondiente tiene cuatro bloques. Agrupar instrucciones por sus
+entradas y salidas hace visible la ejecución con cero iteraciones:
+
+\begin{center}
+\begin{tikzpicture}[node distance=8mm and 14mm]
+\node[caja] (inicio) {Inicializar suma e índice};
+\node[caja,below=of inicio] (condicion) {Comparar $i<n$};
+\node[caja,below left=of condicion] (cuerpo) {Sumar $i$ e incrementar};
+\node[caja,below right=of condicion] (fin) {Devolver suma};
+\draw[flecha] (inicio)--(condicion);
+\draw[flecha] (condicion)--node[left,font=\small]{sí}(cuerpo);
+\draw[flecha] (condicion)--node[right,font=\small]{no}(fin);
+\draw[flecha] (cuerpo.west)--++(-5mm,0)|-(condicion.west);
+\end{tikzpicture}
+\end{center}
+
+Hay además una observación sobre la pila: después de \codigo{push rbp}, la
+función no ejecuta \codigo{sub rsp}, pero accede a posiciones inferiores a
+\codigo{rsp}. Usa la red zone permitida por la ABI de usuario System V AMD64;
+esos temporales no deben sobrevivir a otra llamada~\parencite[\emph{The Stack Frame}]{sysvabi}.
+Aquí el cuerpo es hoja. La presencia de locales no implica que siempre aparezca
+una reserva explícita como en el esquema didáctico del marco.
+
+\subsection{Interpretar el bucle optimizado}
+
+El bucle optimizado de esta compilación conserva iteraciones y trata dos términos
+en cada vuelta. No basta describirlo como el mismo bucle con menos accesos a pila:
+
+\begin{bloquecodigo}
+\lstinputlisting[style=asm,basicstyle=\ttfamily\footnotesize]{laboratorios/P1/extractos/bucle-O2.asm}
+\end{bloquecodigo}
+
+La primera guarda, \codigo{test edi,edi} seguida de \codigo{jle}, resuelve
+$n\le0$. Para $n>0$, \codigo{eax} es el índice y \codigo{edx} la suma.
+\codigo{test dil,0x1} examina la paridad de $n$. Si es par, el índice empieza
+en cero; si es impar, empieza en uno, omitiendo el término cero. El caso $n=1$
+termina antes del cuerpo y devuelve cero.
+
+La instrucción \codigo{lea edx,[rdx+rax*2+0x1]} calcula
+$\mathrm{suma}+2i+1$. Esto añade dos términos consecutivos,
+$i+(i+1)$, y \codigo{add eax,0x2} avanza al siguiente par. Para $n=4$, los
+pares son $(0,1)$ y $(2,3)$, con sumas parciales 1 y 6; para $n=3$, se omite
+el cero y se procesa $(1,2)$, dando 3. La guarda y la paridad aseguran que el
+índice alcance $n$ en el dominio válido; \codigo{jne} comprueba si aún no ha
+llegado. Un salto de desigualdad no convierte en \codigo{unsigned} el argumento
+de la función.
+
+La explicación identifica el efecto observado; no asigna un pase interno de GCC
+sin un informe del compilador. El manual de GCC 13.3 documenta que los niveles
+habilitan conjuntos de optimizaciones que dependen también del objetivo y de su
+configuración~\parencite[apartado~3.11]{gcc133opt}. Tampoco se ha medido el tiempo:
+menos cargas o más términos por vuelta no cuantifican una mejora de rendimiento.
+
+\subsection{Dos contrastes adicionales: condicional y llamadas}
+
+En E01, \codigo{funcion\_if} con \codigo{-O2} usa la siguiente secuencia,
+conservada con sus bytes en la transcripción del registro:
+
+\begin{bloquecodigo}
+\lstinputlisting[style=asm,basicstyle=\ttfamily\footnotesize]{laboratorios/P1/extractos/if-O2.asm}
+\end{bloquecodigo}
+
+\codigo{xor eax,eax} prepara un retorno cero; \codigo{test edi,edi} fija los
+flags del argumento y \codigo{setg al} escribe uno si es positivo con signo.
+No aparece un salto condicional. Escribir solo \codigo{al} no limpia el resto
+del registro, de ahí la importancia de seguir también su inicialización.
+Los controles con \codigo{INT\_MIN}, $-1$, 0, 1 y \codigo{INT\_MAX}
+dieron respectivamente 0, 0, 0, 1 y 1 en ambos niveles.
+
+En la función de llamadas, \codigo{-O0} conserva dos \codigo{call} a
+\codigo{funcion\_suma}, en \codigo{0x122b} y \codigo{0x123d}; los argumentos
+de cada una se preparan en \codigo{edi} y \codigo{esi}. El retorno intermedio
+se guarda en \codigo{[rbp-0x4]}. Con \codigo{-O2}, el cuerpo observado es:
+
+\begin{bloquecodigo}
+\lstinputlisting[style=asm,basicstyle=\ttfamily\footnotesize]{laboratorios/P1/extractos/llamada-O2.asm}
+\end{bloquecodigo}
+
+Se calcula $(x+y)+z$ directamente; las dos llamadas internas han desaparecido.
+El fuente contiene llamadas y esta implementación compilada es hoja. Por ello
+clasificar una función exige declarar si se habla del fuente o del cuerpo máquina.
+En ambos niveles, $(1,2,3)$ dio 6 y $(-2,5,-1)$ dio 2. Estos casos mantienen
+representables tanto el resultado intermedio como el final.
+
+\subsection{Repetir, interpretar y entregar}
+
+Desde la raíz del repositorio se puede ejecutar el protocolo sin modificar el
+banco de muestras ni instalar bibliotecas Python externas. Requiere Python 3.11
+o posterior, GCC, Make, Binutils, \codigo{file} y Git:
+
+\begin{lstlisting}[language=bash]
+python3 laboratorios/P1/reproducir.py
+\end{lstlisting}
+
+Cada ejecución crea un directorio nuevo en \path{build/laboratorios/P1/},
+con comandos, versiones, códigos de salida, desensamblados y hashes. El programa
+de controles se enlaza por separado; no cambia las opciones de los cuatro
+ejecutables originales. La ficha \material{laboratorios/P1/README.md} explica
+cómo relacionar cada salida con su entrada.
+
+Las tres ejecuciones del programa original por nivel, con argumento correcto,
+incorrecto y ausente, imprimieron la línea
+\codigo{retorno=42 if=1 bucle=45 llamada=6}; sus códigos de salida fueron
+0, 1 y 1. Un código 1 forma parte del comportamiento previsto en los dos últimos
+casos. Los controles de memoria confirmaron offsets 0, 2 y 4, tamaño 8 y bytes
+\codigo{0D 0C 0B 0A} para \codigo{0x0A0B0C0D}. Son observaciones del entorno
+LP64 declarado, no una regla de serialización para cualquier plataforma.
+
+Una entrega razonada relacionará predicción, localizador, instrucción y efecto.
+Debe explicar por qué la comparación inicial evita entrar con $n\le0$, qué
+invariante conserva cada vuelta y cuáles son las dos transformaciones realmente
+observadas. Las transcripciones sustentan esa explicación; no la sustituyen.
+El experimento no incluye ARM/MIPS, depuración interactiva ni entradas con
+overflow con signo, y no valida automáticamente los ejemplos de otros capítulos.

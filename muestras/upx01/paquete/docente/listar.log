@@ -1,0 +1,11 @@
+{
+  "id": "listar",
+  "comando": [
+    "/tmp/p5-upx-root/usr/bin/upx-ucl",
+    "-l",
+    "/home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/alumnado/empaquetado"
+  ],
+  "retorno": 0,
+  "stdout": "                       Ultimate Packer for eXecutables\n                          Copyright (C) 1996 - 2024\nUPX 4.2.2       Markus Oberhumer, Laszlo Molnar & John Reiser    Jan 3rd 2024\n\n        File size         Ratio      Format      Name\n   --------------------   ------   -----------   -----------\n     14472 ->      5844   40.38%   linux/amd64   /home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/alumnado/empaquetado\n",
+  "stderr": ""
+}

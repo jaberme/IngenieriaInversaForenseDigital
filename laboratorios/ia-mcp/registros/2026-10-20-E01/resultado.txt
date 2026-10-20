@@ -1,0 +1,4 @@
+tag=LAB-RE01
+id=1042
+text=HTXLSR DOID 2026.
+checksum=d8d9f468

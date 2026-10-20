@@ -1,0 +1,46 @@
+{
+  "comando": [
+    "gcc",
+    "-std=c11",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Werror",
+    "-O1",
+    "-g3",
+    "-fno-inline",
+    "-fno-omit-frame-pointer",
+    "-fPIE",
+    "-pie",
+    "-Wl,-z,relro,-z,now",
+    "-Wl,--build-id=sha1",
+    "-ffile-prefix-map=/home/hunter/projects/ingenieriaInversa/muestras/re01=.",
+    "-o",
+    "/home/hunter/projects/ingenieriaInversa/muestras/re01/paquete/docente/RE-01.simbolos",
+    "re01.c"
+  ],
+  "cwd": "/home/hunter/projects/ingenieriaInversa/muestras/re01",
+  "id": "RE-01",
+  "version": "1.0",
+  "nombre": "RE-01",
+  "procedencia": "Muestra sintética propia del curso; código re01.c",
+  "uso": "Uso y redistribución en el contexto docente del curso",
+  "creacion_utc": "2026-09-28T01:19:19.315050+00:00",
+  "formato": "ELF64 x86-64 PIE dinámico; sin .symtab ni DWARF; imports dinámicos conservados",
+  "tamano": 14472,
+  "sha256": "65236d15de045be83091934cb5c1f74aebf7d2ecd176b344743d51565ef2b29f",
+  "fuente_sha256": "a9fd480d1d308bdf95516ae091b8f2e4e984947766c83a19aaed7ac41b73e4e2",
+  "herramientas": {
+    "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "ld": "GNU ld (GNU Binutils for Ubuntu) 2.42",
+    "objcopy": "GNU objcopy (GNU Binutils for Ubuntu) 2.42",
+    "readelf": "GNU readelf (GNU Binutils for Ubuntu) 2.42"
+  },
+  "libc_build": "glibc 2.39",
+  "requisitos_glibc": "\nVersion symbols section '.gnu.version' contains 22 entries:\n Addr: 0x0000000000000734  Offset: 0x00000734  Link: 6 (.dynsym)\n  000:   0 (*local*)       2 (GLIBC_2.34)    3 (GLIBC_2.2.5)   1 (*global*)   \n  004:   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)\n  008:   4 (GLIBC_2.4)     3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   1 (*global*)   \n  00c:   3 (GLIBC_2.2.5)   5 (GLIBC_2.7)     6 (GLIBC_2.3.4)   3 (GLIBC_2.2.5)\n  010:   3 (GLIBC_2.2.5)   6 (GLIBC_2.3.4)   1 (*global*)      7 (GLIBC_2.33) \n  014:   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)\n\nVersion needs section '.gnu.version_r' contains 1 entry:\n Addr: 0x0000000000000760  Offset: 0x00000760  Link: 7 (.dynstr)\n  000000: Version: 1  File: libc.so.6  Cnt: 6\n  0x0010:   Name: GLIBC_2.33  Flags: none  Version: 7\n  0x0020:   Name: GLIBC_2.3.4  Flags: none  Version: 6\n  0x0030:   Name: GLIBC_2.7  Flags: none  Version: 5\n  0x0040:   Name: GLIBC_2.4  Flags: none  Version: 4\n  0x0050:   Name: GLIBC_2.2.5  Flags: none  Version: 3\n  0x0060:   Name: GLIBC_2.34  Flags: none  Version: 2\n",
+  "limites": [
+    "No genera tráfico de red",
+    "No constituye EV-01 ni acredita actividad histórica",
+    "Resultados dependen del build; no se promete igualdad entre toolchains"
+  ]
+}

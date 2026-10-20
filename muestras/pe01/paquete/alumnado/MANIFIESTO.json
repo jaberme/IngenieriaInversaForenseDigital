@@ -1,0 +1,24 @@
+{
+  "id": "PE-01",
+  "version": "1.0",
+  "fichero": "ejemplos-pe.exe",
+  "formato": "PE32+ AMD64 consola, stripped",
+  "tamano": 39936,
+  "sha256": "ed7640c92c67e0308d8a7c2edc21f3d7c25f2c435a8ed17cde23cdcd0eac5015",
+  "fuente": "ejemplos.c, fuente propio del curso compartido con el ELF de P2",
+  "fuente_sha256": "cd356fb092a35109a872c3cf4c10f64983335b6f94ac54663c889e04ddf420a1",
+  "uso": "Uso y redistribución del código propio en el contexto docente del curso; avisos de runtime en licencias/",
+  "creacion_utc": "2026-09-28T01:35:21.636947+00:00",
+  "herramientas": {
+    "gcc": "x86_64-w64-mingw32-gcc-posix (GCC) 13-posix",
+    "objcopy": "GNU objcopy (GNU Binutils) 2.41.90.20240122",
+    "objdump": "GNU objdump (GNU Binutils) 2.41.90.20240122",
+    "ld": "GNU ld (GNU Binutils) 2.41.90.20240122"
+  },
+  "validacion": "Inspección estática y comparación de bytes; no ejecutado en Windows/Wine",
+  "limites": [
+    "Sin firma Authenticode; manifiesto de distribución distinto de un recurso RT_MANIFEST",
+    "Timestamp COFF cero por opción de enlace; no representa fecha histórica",
+    "ASLR declarado en cabecera; no se ha medido una base real en ejecución"
+  ]
+}

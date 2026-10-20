@@ -1,0 +1,60 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "share": "disabled",
+  "mcp": {
+    "rea": {
+      "type": "local",
+      "command": [
+        "npx",
+        "--yes",
+        "rea-agents@6.7.0",
+        "mcp"
+      ],
+      "enabled": true,
+      "timeout": 600000,
+      "environment": {
+        "GHIDRA_INSTALL_DIR": "/ruta/absoluta/ghidra_12.1.4_PUBLIC",
+        "JAVA_HOME": "/ruta/absoluta/jdk",
+        "REA_ANALYSIS_PROVIDER": "ghidra"
+      }
+    }
+  },
+  "permission": {
+    "*": "deny",
+    "rea_open_binary": "ask",
+    "rea_binary_session": "allow",
+    "rea_binary_overview": "allow",
+    "rea_list_procedures": "allow",
+    "rea_search_strings": "allow",
+    "rea_xrefs": "allow",
+    "rea_resolve_containing_procedure": "allow",
+    "rea_analyze_function": "allow",
+    "rea_procedure_assembly": "allow",
+    "rea_export_evidence_bundle": "ask",
+    "rea_close_binary": "allow"
+  },
+  "model": "ollama/rea-local",
+  "small_model": "ollama/rea-local",
+  "enabled_providers": [
+    "ollama"
+  ],
+  "autoupdate": false,
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama local",
+      "options": {
+        "baseURL": "http://127.0.0.1:11434/v1"
+      },
+      "models": {
+        "rea-local": {
+          "name": "REA local (Qwen3 8B)",
+          "limit": {
+            "context": 32768,
+            "output": 8192
+          }
+        }
+      }
+    }
+  }
+}

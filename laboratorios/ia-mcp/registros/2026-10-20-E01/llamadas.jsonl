@@ -1,0 +1,15 @@
+{"name": "binary_session", "arguments": {"expected_package_version": "6.7.0"}, "file": "binary_session.json", "isError": false, "evidence_id": null}
+{"name": "open_binary", "arguments": {"path": "/home/hunter/projects/ingenieriaInversa/Libro/build/ia-mcp-E02/RE-01", "provider_id": "ghidra"}, "file": "open_binary.json", "isError": false, "evidence_id": null}
+{"name": "binary_overview", "arguments": {}, "file": "binary_overview.json", "isError": false, "evidence_id": "ev_0efaecf9839509e7a021575edad1cee02716e3fb0f224e4c6c38bb4c45aa0ee0"}
+{"name": "list_procedures", "arguments": {}, "file": "list_procedures.json", "isError": false, "evidence_id": "ev_ebc4d1ec43d384b5e017bbce362fad227238ec4863976dd8206717e620764e3b"}
+{"name": "search_strings", "arguments": {"pattern": "checksum"}, "file": "search_strings.json", "isError": false, "evidence_id": "ev_6d479a4283d490cf92dd007d47fd645bd8f121e46f48a409bec2c5f1324b62ea"}
+{"name": "xrefs", "arguments": {"address": "0x1020d8"}, "file": "xrefs.json", "isError": false, "evidence_id": "ev_93981dd3cd414e31ffa30e7a0fc6f0a00d8a03ef90668d920f9d19f4abea7997"}
+{"name": "resolve_containing_procedure", "arguments": {"address": "0x101a14"}, "file": "resolve_containing_procedure.json", "isError": false, "evidence_id": "ev_5887b0c1d5e6844171f8021c83c298455dd8fdf797ad69c83a47dccc37bf788c"}
+{"name": "analyze_function", "arguments": {"procedure": "0x101309"}, "file": "configuracion.json", "isError": false, "evidence_id": "ev_1c2ad8d4a2f4dcb9eeded782911f10cbc52efeee0766c9f1e065f5a6bc19b076"}
+{"name": "analyze_function", "arguments": {"procedure": "0x10165b"}, "file": "documento.json", "isError": false, "evidence_id": "ev_ce43a41835e34051a49ed4666f3a89092676a36d6973671e2da74bf6556d4844"}
+{"name": "analyze_function", "arguments": {"procedure": "0x101942"}, "file": "transformacion.json", "isError": false, "evidence_id": "ev_48c53081189edf456ee3516ed8d3cddf12d2cb43aa4ff291b94cc33aa778df7c"}
+{"name": "analyze_function", "arguments": {"procedure": "0x1019cd"}, "file": "salida.json", "isError": false, "evidence_id": "ev_1757a72bc8d7c1cc2f608f77dce0ccf5e032d61a79da834cb3d77d22dce1bb6e"}
+{"name": "analyze_function", "arguments": {"procedure": "0x101a70"}, "file": "principal.json", "isError": false, "evidence_id": "ev_7975e88bc64669ff7845df1fb82f09a22915e5504340f744384fba0cc22c97bf"}
+{"name": "procedure_assembly", "arguments": {"procedure": "0x101942"}, "file": "procedure_assembly.json", "isError": false, "evidence_id": "ev_2ec3d4fd0289fc5073429b9a51e375f01ff2a7ecada05577d1e0a8d0fc73b2ec"}
+{"name": "export_evidence_bundle", "arguments": {"path": "/home/hunter/projects/ingenieriaInversa/Libro/build/ia-mcp-E02/bundle.json"}, "file": "export_evidence_bundle.json", "isError": false, "evidence_id": null}
+{"name": "close_binary", "arguments": {}, "file": "close_binary.json", "isError": false, "evidence_id": null}

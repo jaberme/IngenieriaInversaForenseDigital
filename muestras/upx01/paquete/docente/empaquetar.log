@@ -1,0 +1,13 @@
+{
+  "id": "empaquetar",
+  "comando": [
+    "/tmp/p5-upx-root/usr/bin/upx-ucl",
+    "-9",
+    "-o",
+    "/home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/alumnado/empaquetado",
+    "/home/hunter/projects/ingenieriaInversa/muestras/upx01/paquete/alumnado/original"
+  ],
+  "retorno": 0,
+  "stdout": "                       Ultimate Packer for eXecutables\n                          Copyright (C) 1996 - 2024\nUPX 4.2.2       Markus Oberhumer, Laszlo Molnar & John Reiser    Jan 3rd 2024\n\n        File size         Ratio      Format      Name\n   --------------------   ------   -----------   -----------\n     14472 ->      5844   40.38%   linux/amd64   empaquetado\n\nPacked 1 file.\n",
+  "stderr": ""
+}

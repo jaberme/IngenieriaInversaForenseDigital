@@ -1,0 +1,70 @@
+{
+  "fecha": "2026-10-20",
+  "modelo": "qwen3:8b",
+  "ollama": "0.34.4",
+  "digest_modelo": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+  "cuantizacion": "Q4_K_M",
+  "contexto_declarado": 40960,
+  "contexto_solicitado_y_observado": 32768,
+  "procesador_observado": "CPU",
+  "think": false,
+  "temperatura": 0,
+  "jsonschema": "4.10.3",
+  "q03": {
+    "segundos": 544.3,
+    "respuestas_ollama": 6,
+    "propuestas_herramienta": 5,
+    "llamadas_mcp_propuestas_ejecutadas": 4,
+    "bloqueos_anfitrion": 1,
+    "llamadas_mcp_de_conservacion_y_cierre_del_host": 2,
+    "ayuda_humana": "Dirección Ghidra 0x101942 proporcionada al modelo en prompt-guiado.txt."
+  },
+  "revision_afirmaciones": [
+    {
+      "afirmacion": "Constantes inicial y multiplicativa del acumulador",
+      "dictamen": "confirmado",
+      "soporte": "Q03/consulta-02-analyze_function.json"
+    },
+    {
+      "afirmacion": "El acumulador opera sobre bytes originales",
+      "dictamen": "incorrecto",
+      "correccion": "Opera sobre el byte transformado, almacenado y extendido antes de XOR/IMUL.",
+      "direcciones": [
+        "0x101965",
+        "0x101969",
+        "0x10196c",
+        "0x10196f"
+      ]
+    },
+    {
+      "afirmacion": "0x4ec4ec4f y SHR son operaciones de hash",
+      "dictamen": "incorrecto",
+      "correccion": "Secuencia del resto por 26 usado para la transformación de letras."
+    },
+    {
+      "afirmacion": "Texto predicho literal",
+      "dictamen": "omitido",
+      "control_autor": "HTXLSR DOID 2026."
+    },
+    {
+      "afirmacion": "Checksum numérico",
+      "dictamen": "declarado pendiente por el modelo",
+      "control_autor": "d8d9f468; no fue entregado a Qwen como solución"
+    },
+    {
+      "afirmacion": "Citas evidence_id por conclusión",
+      "dictamen": "omitidas"
+    }
+  ],
+  "resultado_global": "Canal e invocación funcionales. Interpretación técnica requiere corrección y trazabilidad añadida por el analista.",
+  "muestra_ejecutada_por_el_modelo_o_host": false,
+  "inferencias_online": false,
+  "opencode_ejecutado": false,
+  "conservacion_bundle": {
+    "original_Q03": "Vacío por exportar tras el cierre; preservado sin modificar.",
+    "correccion": "Exportar antes de close_binary; conserva nombres nuevos si ya hay bundle.",
+    "prueba_sin_inferencia": "Repetición de analyze_function y procedure_assembly con REA/Ghidra.",
+    "igualdad_completa_json_e_identificadores": true,
+    "resultado": "conservacion-resultado.json"
+  }
+}

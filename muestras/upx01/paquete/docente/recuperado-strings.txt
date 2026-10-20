@@ -1,0 +1,49 @@
+/lib64/ld-linux-x86-64.so.2
+__printf_chk
+strlen
+__libc_start_main
+__cxa_finalize
+libc.so.6
+GLIBC_2.3.4
+GLIBC_2.2.5
+GLIBC_2.34
+_ITM_deregisterTMCloneTable
+__gmon_start__
+_ITM_registerTMCloneTable
+PTE1
+u+UH
+retorno=%d if=%d bucle=%d llamada=%d
+Contrase
+a incorrecta.
+Uso: %s <contrasena>
+Contrase
+a correcta.
+R3v3rs1ng_UAL
+9*3$"
+GCC: (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+.shstrtab
+.interp
+.note.gnu.property
+.note.gnu.build-id
+.note.ABI-tag
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rela.dyn
+.rela.plt
+.init
+.plt.got
+.plt.sec
+.text
+.fini
+.rodata
+.eh_frame_hdr
+.eh_frame
+.init_array
+.fini_array
+.dynamic
+.data
+.bss
+.comment

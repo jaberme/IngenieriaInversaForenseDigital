@@ -1,0 +1,41 @@
+{
+  "pruebas": [
+    {
+      "nombre": "valida",
+      "argv": [
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/ia-mcp-E02/RE-01",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/ia-mcp-E02/entradas/valida.cfg",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/ia-mcp-E02/entradas/documento.txt",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/ia-mcp-E02/resultado.txt"
+      ],
+      "retorno": 0,
+      "esperado": 0
+    },
+    {
+      "nombre": "salida-existente",
+      "argv": [
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/ia-mcp-E02/RE-01",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/ia-mcp-E02/entradas/valida.cfg",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/ia-mcp-E02/entradas/documento.txt",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/ia-mcp-E02/resultado.txt"
+      ],
+      "retorno": 7,
+      "esperado": 7
+    },
+    {
+      "nombre": "config-invalida",
+      "argv": [
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/ia-mcp-E02/RE-01",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/ia-mcp-E02/entradas/opcion-invalida.cfg",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/ia-mcp-E02/entradas/documento.txt",
+        "/home/hunter/projects/ingenieriaInversa/Libro/build/ia-mcp-E02/ausente.txt"
+      ],
+      "retorno": 4,
+      "esperado": 4
+    }
+  ],
+  "texto_predicho": "HTXLSR DOID 2026.",
+  "checksum_predicho": "d8d9f468",
+  "resultado_sha256": "d58d33a8c2e72193e21864e1e0d4201b3e7da1af241f150e397b8f71dc7c68c2",
+  "coincide": true
+}

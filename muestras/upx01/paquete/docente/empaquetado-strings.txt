@@ -1,0 +1,87 @@
+UPX!
+tdoP7
+[oQ7
+/lib64
+nux-x86-
+so.2
+__prytf_chk
+strle
+art_mai
+cxa_f	a
+?LIBC_2.3.4
+_ITM_deregiQ
+CloneTabjWgm
+i_*(-X
+}CX/
+PTE1
+u+UH
+retorno=%d if
+bucle
+llamada
+Contrase
+&nc16cta.
+Uso: %s 
+<c!na>.,
+R3v3rs1ng_UAL
+[& D
+9*3$"
+USQRH
+W^YH
+PROT_EXEC|PROT_WRITE failed.
+_j<X
+$Info: This file is packed with the UPX executable packer http://upx.sf.net $
+$Id: UPX 4.22 Copyright (C) 1996-2024 the UPX Team. All Rights Reserved. $
+_RPWQM)
+j"AZR^j
+PZS^
+/proc/self/exe
+IuDSWH
+s2V^
+XAVAWPH
+YT_j
+AY^_
+D$ [I
+UPX!u
+slIT$}
+}aw993u
+([]A\A]
+I[8k
+(L	"
+tL	n
++xHf
+p(E1[$1
+fFj9
+~*"|]
+I5(Ag
+@bQs
+ k1(
+=(I[u
+A^A_)
+m@S r6
+ck5?
+JAPC
+JG=,1
+SRVW
+RY?WVj,4
+GCC: (Ubuntu 13.
+0-6u
+2~24
+.shst
+rtab	i!erp
+no.g
+nu.prop
+Filc
+d-id
+ABI-;g
+aK	dynsym
+};vEsion
+ela(	plt
+secm
+-odav
+_frame_hdr
+C_ar
+L>bss
+com2
+aA;?
+UPX!
+UPX!

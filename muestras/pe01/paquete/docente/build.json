@@ -1,0 +1,82 @@
+{
+  "comando": [
+    "/tmp/p2-mingw-root/usr/bin/x86_64-w64-mingw32-gcc-posix",
+    "-std=c11",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Werror",
+    "-O2",
+    "-g",
+    "-ffile-prefix-map=/home/hunter/projects/ingenieriaInversa/muestras/pe01/paquete/docente=.",
+    "-Wl,--no-insert-timestamp,--dynamicbase,--nxcompat",
+    "-o",
+    "ejemplos-pe.simbolos.exe",
+    "ejemplos.c"
+  ],
+  "cwd": "/home/hunter/projects/ingenieriaInversa/muestras/pe01/paquete/docente",
+  "strip": [
+    "/tmp/p2-mingw-root/usr/bin/x86_64-w64-mingw32-objcopy",
+    "--strip-all",
+    "/home/hunter/projects/ingenieriaInversa/muestras/pe01/paquete/docente/ejemplos-pe.simbolos.exe",
+    "/home/hunter/projects/ingenieriaInversa/muestras/pe01/paquete/alumnado/ejemplos-pe.exe"
+  ],
+  "entorno": {
+    "LC_ALL": "C",
+    "SOURCE_DATE_EPOCH": "0"
+  },
+  "paquetes_toolchain": [
+    {
+      "archivo": "binutils-mingw-w64-x86-64_2.41.90.20240122-1ubuntu1+11.4_amd64.deb",
+      "sha256": "28bfabbf64a68813a56360bca056072af9ff71ef4090a4b8a8a085afcda3e4dd",
+      "control": "Package: binutils-mingw-w64-x86-64\nVersion: 2.41.90.20240122-1ubuntu1+11.4\nArchitecture: amd64"
+    },
+    {
+      "archivo": "gcc-mingw-w64-base_13.2.0-6ubuntu1+26.1_amd64.deb",
+      "sha256": "a30c07e807e9874ea93909448c5d6d37f9569ebe60ad32de8e490aad198538a3",
+      "control": "Package: gcc-mingw-w64-base\nVersion: 13.2.0-6ubuntu1+26.1\nArchitecture: amd64"
+    },
+    {
+      "archivo": "gcc-mingw-w64-x86-64-posix-runtime_13.2.0-6ubuntu1+26.1_amd64.deb",
+      "sha256": "aca6b438e0b55b11cedcf1170a1ee26e7979e34192e34f6e6389e560908a5bfc",
+      "control": "Package: gcc-mingw-w64-x86-64-posix-runtime\nVersion: 13.2.0-6ubuntu1+26.1\nArchitecture: amd64"
+    },
+    {
+      "archivo": "gcc-mingw-w64-x86-64-posix_13.2.0-6ubuntu1+26.1_amd64.deb",
+      "sha256": "0855fa1d4a618550faac3a3e4352aa3226833b28184ad3c3b496a68a22c4eda2",
+      "control": "Package: gcc-mingw-w64-x86-64-posix\nVersion: 13.2.0-6ubuntu1+26.1\nArchitecture: amd64"
+    },
+    {
+      "archivo": "mingw-w64-common_11.0.1-3build1_all.deb",
+      "sha256": "4a42fd30fbc3838c58c929d8a4882682fc12408bb7a0e6cafa913c0f0a57c187",
+      "control": "Package: mingw-w64-common\nVersion: 11.0.1-3build1\nArchitecture: all"
+    },
+    {
+      "archivo": "mingw-w64-x86-64-dev_11.0.1-3build1_all.deb",
+      "sha256": "018480a62907fcca19c6bf2975ae01f5c92c23dee8c3cf7a8355c10bf7d42c6f",
+      "control": "Package: mingw-w64-x86-64-dev\nVersion: 11.0.1-3build1\nArchitecture: all"
+    }
+  ],
+  "id": "PE-01",
+  "version": "1.0",
+  "fichero": "ejemplos-pe.exe",
+  "formato": "PE32+ AMD64 consola, stripped",
+  "tamano": 39936,
+  "sha256": "ed7640c92c67e0308d8a7c2edc21f3d7c25f2c435a8ed17cde23cdcd0eac5015",
+  "fuente": "ejemplos.c, fuente propio del curso compartido con el ELF de P2",
+  "fuente_sha256": "cd356fb092a35109a872c3cf4c10f64983335b6f94ac54663c889e04ddf420a1",
+  "uso": "Uso y redistribución del código propio en el contexto docente del curso; avisos de runtime en licencias/",
+  "creacion_utc": "2026-09-28T01:35:21.636947+00:00",
+  "herramientas": {
+    "gcc": "x86_64-w64-mingw32-gcc-posix (GCC) 13-posix",
+    "objcopy": "GNU objcopy (GNU Binutils) 2.41.90.20240122",
+    "objdump": "GNU objdump (GNU Binutils) 2.41.90.20240122",
+    "ld": "GNU ld (GNU Binutils) 2.41.90.20240122"
+  },
+  "validacion": "Inspección estática y comparación de bytes; no ejecutado en Windows/Wine",
+  "limites": [
+    "Sin firma Authenticode; manifiesto de distribución distinto de un recurso RT_MANIFEST",
+    "Timestamp COFF cero por opción de enlace; no representa fecha histórica",
+    "ASLR declarado en cabecera; no se ha medido una base real en ejecución"
+  ]
+}

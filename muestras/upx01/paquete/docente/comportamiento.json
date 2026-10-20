@@ -1,0 +1,306 @@
+{
+  "objetos": {
+    "original": {
+      "tamano": 14472,
+      "sha256": "125c09bcfecf485febfe7cb74787dc84000263edc4f798d1c12905067f93eaf0",
+      "tipo_elf": 3,
+      "entry": "0x1150",
+      "program_headers": 13,
+      "section_headers": 29,
+      "cadena_clave_literal": true
+    },
+    "empaquetado": {
+      "tamano": 5844,
+      "sha256": "184e21256a3816e44d0204070b376811eac295c0f179d0dda4ee1bf56498f079",
+      "tipo_elf": 3,
+      "entry": "0x58a0",
+      "program_headers": 3,
+      "section_headers": 0,
+      "cadena_clave_literal": true
+    },
+    "recuperado": {
+      "tamano": 14472,
+      "sha256": "125c09bcfecf485febfe7cb74787dc84000263edc4f798d1c12905067f93eaf0",
+      "tipo_elf": 3,
+      "entry": "0x1150",
+      "program_headers": 13,
+      "section_headers": 29,
+      "cadena_clave_literal": true
+    }
+  },
+  "casos": [
+    {
+      "id": "sin-argumentos",
+      "argumentos": [],
+      "observaciones": {
+        "original": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nUso: muestra <contrasena>\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "empaquetado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nUso: muestra <contrasena>\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "recuperado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nUso: muestra <contrasena>\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        }
+      }
+    },
+    {
+      "id": "vacia",
+      "argumentos": [
+        ""
+      ],
+      "observaciones": {
+        "original": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "empaquetado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "recuperado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        }
+      }
+    },
+    {
+      "id": "corta",
+      "argumentos": [
+        "abc"
+      ],
+      "observaciones": {
+        "original": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "empaquetado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "recuperado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        }
+      }
+    },
+    {
+      "id": "longitud-correcta",
+      "argumentos": [
+        "AAAAAAAAAAAAA"
+      ],
+      "observaciones": {
+        "original": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "empaquetado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "recuperado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        }
+      }
+    },
+    {
+      "id": "diferencia-tardia",
+      "argumentos": [
+        "R3v3rs1ng_UAX"
+      ],
+      "observaciones": {
+        "original": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "empaquetado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "recuperado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        }
+      }
+    },
+    {
+      "id": "valida",
+      "argumentos": [
+        "R3v3rs1ng_UAL"
+      ],
+      "observaciones": {
+        "original": {
+          "retorno": 0,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña correcta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "empaquetado": {
+          "retorno": 0,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña correcta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "recuperado": {
+          "retorno": 0,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña correcta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        }
+      }
+    },
+    {
+      "id": "argumento-extra",
+      "argumentos": [
+        "R3v3rs1ng_UAL",
+        "extra"
+      ],
+      "observaciones": {
+        "original": {
+          "retorno": 0,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña correcta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "empaquetado": {
+          "retorno": 0,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña correcta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "recuperado": {
+          "retorno": 0,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña correcta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        }
+      }
+    },
+    {
+      "id": "salto-final",
+      "argumentos": [
+        "R3v3rs1ng_UAL\n"
+      ],
+      "observaciones": {
+        "original": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "empaquetado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "recuperado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        }
+      }
+    },
+    {
+      "id": "no-ascii",
+      "argumentos": [
+        "contraseña"
+      ],
+      "observaciones": {
+        "original": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "empaquetado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "recuperado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        }
+      }
+    },
+    {
+      "id": "larga",
+      "argumentos": [
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      ],
+      "observaciones": {
+        "original": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "empaquetado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        },
+        "recuperado": {
+          "retorno": 1,
+          "stdout": "retorno=42 if=1 bucle=45 llamada=6\nContraseña incorrecta.\n",
+          "stderr": "",
+          "directorio_trabajo_intacto": true
+        }
+      }
+    }
+  ],
+  "ejecuciones": 30,
+  "entorno": {
+    "sistema": "Linux-6.17.0-1032-oem-x86_64-with-glibc2.39",
+    "maquina": "x86_64",
+    "libc": [
+      "glibc",
+      "2.39"
+    ]
+  },
+  "limites": [
+    "Diez entradas concretas; no prueba equivalencia universal",
+    "Control de ficheros limitado al directorio de trabajo; sin trazado global de syscalls",
+    "No valida aquí la actividad anti-debug de P5"
+  ]
+}

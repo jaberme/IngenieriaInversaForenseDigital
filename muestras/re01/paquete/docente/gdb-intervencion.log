@@ -1,0 +1,15 @@
+Breakpoint 1 at 0x1309: file ./re01.c, line 30.
+
+Breakpoint 1, load_config (path=0x7ffdc8dcda04 "/tmp/re01-check-da727hp1/c", cfg=cfg@entry=0x7ffdc8dcc360) at ./re01.c:30
+0x000055c1f8357adc in main (argc=<optimized out>, argv=0x7ffdc8dcc5f8) at ./re01.c:131
+131	in ./re01.c
+Value returned is $1 = 0
+LIMITE_ANTES=16
+LIMITE_DESPUES=17
+MAIN_RUNTIME=0x55c1f8357a70
+OK id=1042 bytes=17 checksum=53cfb773
+[Inferior 1 (process 272783) exited normally]
+warning: Probes-based dynamic linker interface failed.
+Reverting to original interface.
+warning: 30	./re01.c: No such file or directory
+RE01 status=0 stage=done

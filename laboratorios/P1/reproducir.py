@@ -32,7 +32,7 @@ def main():
             parser.error(f"Falta la herramienta {nombre}")
     fuentes = [RAIZ / "muestras/build/ejemplos.c", RAIZ / "muestras/build/Makefile",
                LAB / "controles.c", Path(__file__).resolve(),
-               PRACTICA / "Practica1.pdf", PRACTICA / "solucion.pdf"]
+               PRACTICA / "Practica1.pdf", PRACTICA / "SolucionP1.pdf"]
     ausentes = [ruta for ruta in fuentes if not ruta.is_file()]
     if ausentes:
         parser.error("Faltan entradas de P1: " +

@@ -26,7 +26,7 @@ check: all
 	python3 verificar.py
 	./$(OUT)/ofuscacion-dbg
 	./$(OUT)/ofuscacion-opt
-	$(MAKE) -C ../../muestras/build x86
+	$(MAKE) -C ../../../muestras/build x86
 	python3 verificar_literal.py
 
 .PHONY: all check

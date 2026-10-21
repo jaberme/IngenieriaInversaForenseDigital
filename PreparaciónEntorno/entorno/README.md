@@ -24,8 +24,8 @@ el alumnado puede recibir ese fichero ya compilado. No se necesita Windows para 
 Desde una VM de laboratorio (el script modifica paquetes del sistema):
 
 ```bash
-bash entorno/provision.sh
-bash entorno/provision.sh --check
+bash PreparaciónEntorno/entorno/provision.sh
+bash PreparaciónEntorno/entorno/provision.sh --check
 make -C muestras/build all
 ```
 

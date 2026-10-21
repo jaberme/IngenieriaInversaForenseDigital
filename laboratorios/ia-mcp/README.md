@@ -1,8 +1,5 @@
 # Ingeniería inversa con MCP e IA
 
-Material del [capítulo especial](../../GUIA_DEL_LIBRO.md#capitulo-especial),
-situado entre el capítulo 6 y la parte forense, sin incrementar su numeración.
-
 ## Alcance comprobado
 
 Se ejecutó REA 6.7.0 como servidor MCP por stdio, con Ghidra 12.1.4,
@@ -166,7 +163,7 @@ Se conservó ese original, se corrigió la exportación y se repitieron las dos
 consultas sin inferencia: coincidieron sus JSON e identificadores. El bundle
 recuperado y su prueba están archivados por separado.
 
-El [acta inicial](../../revision/2026-10-20-capitulo-especial-ia.md) y la
-[ampliación con Qwen](../../revision/2026-10-20-ollama-qwen3.md) delimitan qué se
-ejecutó y qué se contrastó documentalmente. Los paquetes, proyectos temporales de Ghidra,
-ejecutables duplicados y PDF permanecen fuera de los registros versionables.
+Los manifiestos, resúmenes y revisiones archivados en las dos carpetas anteriores
+delimitan qué se ejecutó y qué se contrastó documentalmente. Los paquetes,
+proyectos temporales de Ghidra, ejecutables duplicados y PDF permanecen fuera de
+los registros versionables.

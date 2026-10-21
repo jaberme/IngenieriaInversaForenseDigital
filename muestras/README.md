@@ -30,8 +30,8 @@ salidas de descompilación se obtienen del build real, no de una captura de otro
 
 ## Pendiente de producir
 
-FW-01 y las evidencias forenses completas según el
-[caso integrador](../docs/caso-integrador.md). RE-01 ya está producido y dispone de
+FW-01 y las evidencias forenses completas siguen pendientes de producir y no
+forman parte de esta edición del repositorio. RE-01 ya está producido y dispone de
 [solución docente](re01/docente.md). El crackme conserva su función de calentamiento;
 la imagen didáctica actual tampoco contiene un servicio real ni registros de actividad.
 

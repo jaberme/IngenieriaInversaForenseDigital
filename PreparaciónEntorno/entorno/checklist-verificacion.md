@@ -3,7 +3,7 @@
 No marcar como completado sin ejecutarlo en la VM que recibirá el alumnado.
 
 - [ ] SO x86-64, recursos medidos y snapshot; registrar versiones y fecha.
-- [ ] `bash entorno/provision.sh --check` sin ausencias del núcleo.
+- [ ] `bash PreparaciónEntorno/entorno/provision.sh --check` sin ausencias del núcleo.
 - [ ] Binary Ninja abre ELF/PE, permite HLIL, tipos/comentarios y guardar/reabrir `.bndb`;
       comprobar licencia y operación sin conexión durante la clase.
 - [ ] `make -C muestras/build all pe firmware`; registrar toolchain y hashes de salida.

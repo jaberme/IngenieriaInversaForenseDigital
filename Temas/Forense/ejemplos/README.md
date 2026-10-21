@@ -10,16 +10,21 @@ No necesita red, montaje, dispositivos de bloques ni privilegios administrativos
 
 ```bash
 # Crea un destino nuevo; rechaza sobrescribir uno existente.
-python3 temas-forense/ejemplos/generar.py temas-forense/ejemplos/salida/mi-demo --disco
+python3 Temas/Forense/ejemplos/generar.py \
+  Temas/Forense/ejemplos/salida/mi-demo --disco
 
 # Guarda el inventario fuera del directorio que se inventaría.
-python3 temas-forense/ejemplos/integridad.py temas-forense/ejemplos/salida/mi-demo/datos > temas-forense/ejemplos/salida/inventario.json
+python3 Temas/Forense/ejemplos/integridad.py \
+  Temas/Forense/ejemplos/salida/mi-demo/datos \
+  > Temas/Forense/ejemplos/salida/inventario.json
 
-python3 temas-forense/ejemplos/cronologia.py temas-forense/ejemplos/salida/mi-demo/datos/tiempos.csv > temas-forense/ejemplos/salida/cronologia.csv
-python3 temas-forense/ejemplos/intervalos_tcp.py
+python3 Temas/Forense/ejemplos/cronologia.py \
+  Temas/Forense/ejemplos/salida/mi-demo/datos/tiempos.csv \
+  > Temas/Forense/ejemplos/salida/cronologia.csv
+python3 Temas/Forense/ejemplos/intervalos_tcp.py
 
 # Controles positivos y negativos; deja su propia muestra, logs y resultado.txt.
-make -C temas-forense check-ejemplos
+python3 Temas/Forense/ejemplos/verificar.py
 ```
 
 | Archivo | Función y límite |
@@ -42,4 +47,5 @@ base en uso. Abrir una copia puede afectar a auxiliares: el original se conserva
 La instalación local permitió consultar la ayuda de Volatility 3. Las plantillas de
 RAM requieren una captura y símbolos compatibles; los comandos dc3dd/libewf y
 Wireshark/tshark requieren las herramientas y evidencias indicadas en los capítulos.
-Su ejecución no forma parte de estos controles. Véase [validación](../validacion.md).
+Su ejecución no forma parte de estos controles. Véase el
+[checklist de preparación](../../../PreparaciónEntorno/entorno-forense/checklist-verificacion.md).

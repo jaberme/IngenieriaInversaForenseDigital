@@ -7,7 +7,7 @@ from pathlib import Path
 import re
 import subprocess
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 source = (ROOT / "muestras/build/ejemplos.c").read_text()
 literals = re.findall(r'"(R3v[^"\n]*)"', source)
 assert literals == ["R3v3rs1ng_UAL"], literals

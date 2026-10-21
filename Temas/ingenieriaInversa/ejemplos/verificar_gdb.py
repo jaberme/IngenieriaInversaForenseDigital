@@ -1,14 +1,15 @@
 """Sesiones M3/M4: requiere ptrace permitido; no cambia políticas del sistema.
 
 Ejecutar desde cualquier directorio después de construir ambas colecciones.
-Guarda logs en temas/ejemplos/salida/. No instala herramientas ni usa la red.
+Guarda logs en Temas/ingenieriaInversa/ejemplos/salida/. No instala
+herramientas ni usa la red.
 """
 import os
 import subprocess
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "temas/ejemplos/salida"
+ROOT = Path(__file__).resolve().parents[3]
+OUT = Path(__file__).resolve().parent / "salida"
 SAMPLES = ROOT / "muestras/build/salida"
 
 

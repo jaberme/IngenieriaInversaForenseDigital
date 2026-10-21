@@ -12,8 +12,8 @@ Volatility 3. El script instala las utilidades apt; la versión de Volatility 3 
 seleccionarse y validarse contra las muestras antes de fijarla:
 
 ```bash
-bash entorno-forense/provision.sh
-bash entorno-forense/provision.sh --check
+bash PreparaciónEntorno/entorno-forense/provision.sh
+bash PreparaciónEntorno/entorno-forense/provision.sh --check
 ```
 
 Si se configura `COURSE_VOLATILITY_VERSION` con la versión exacta elegida, el script
@@ -42,7 +42,7 @@ congelado y adquisición en vivo requieren criterios distintos.
 
 ## Distribución de evidencias
 
-Ver [catálogo y estado](../muestras-forense/README.md). Se necesitan manifiestos de
+Ver el [mapa general del material](../../readme.md). Se necesitan manifiestos de
 archivos reales, hashes, licencias, formato, rango y herramientas/símbolos. Un enlace
 genérico a un corpus no es una práctica lista. Las descargas se completan antes de
 clase y se verifica su referencia, sin inventar nombres ni hashes oficiales.

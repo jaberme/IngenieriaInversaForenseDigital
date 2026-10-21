@@ -1,6 +1,6 @@
 # Verificación previa — Forense
 
-- [ ] Apt sin errores; `bash entorno-forense/provision.sh --check` correcto.
+- [ ] Apt sin errores; `bash PreparaciónEntorno/entorno-forense/provision.sh --check` correcto.
 - [ ] Registrar SO/kernel, paquetes, versión exacta de Volatility, dependencias y snapshot.
 - [ ] Añadir el directorio `bin` del entorno virtual al PATH del aula o usar su ruta
       completa al ejecutar `vol`; comprobar `vol -h` en la sesión del alumnado.

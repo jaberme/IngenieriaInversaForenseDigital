@@ -19,22 +19,24 @@
 #
 # Los binarios ARM64 y MIPS no se ejecutan de forma nativa en una máquina
 # x86-64; se ejecutan bajo qemu-user (qemu-aarch64 / qemu-mipsel), instalado
-# también por entorno/provision.sh. Este Makefile solo compila; la ejecución
-# bajo QEMU se hace a mano desde las prácticas (ver practicas/P1-c-a-asm).
+# también por PreparaciónEntorno/entorno/provision.sh. Este Makefile solo
+# compila; la ejecución bajo QEMU se hace a mano desde la práctica publicada en
+# Practicas/IngenieriaInversa/P1-c-a-asm/.
 #
 # Además, antidebug.c (M4/P5) genera una muestra propia x86-64 con
 # autodetección de depurador vía ptrace(PTRACE_TRACEME, ...) (técnica clásica
-# de anti-debugging en Linux, ver modulos/M4-anti-reversing/teoria.md). Se
+# de anti-debugging en Linux, descrita en los capítulos 4 y 5 del libro). Se
 # compila en una sola variante con símbolos (-O0 -g), igual que
 # ejemplos-x86-dbg en P4, porque P5 necesita fijar breakpoints por nombre de
 # función para interceptar la llamada a ptrace.
 #
 # Finalmente, "make firmware" (M5/P6) construye una imagen de firmware
-# DIDÁCTICA propia (ver modulos/M5-firmware/teoria.md y
-# muestras/README.md): concatena una región de relleno de baja entropía que
+# DIDÁCTICA propia (véanse el capítulo 6 del libro y muestras/README.md):
+# concatena una región de relleno de baja entropía que
 # simula un bootloader con un sistema de ficheros SquashFS real que contiene
 # un binario ELF x86-64 (compilado de ejemplos.c). Requiere mksquashfs
-# (paquete squashfs-tools, instalado por entorno/provision.sh, Task 2).
+# (paquete squashfs-tools, instalado por
+# PreparaciónEntorno/entorno/provision.sh).
 #
 # Uso:
 #   make x86       # solo binarios x86-64 (ejemplos.c)

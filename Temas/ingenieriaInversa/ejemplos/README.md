@@ -3,7 +3,7 @@
 Desde la raíz del repositorio, en Linux x86-64:
 
 ```bash
-make -C temas/ejemplos check
+make -C Temas/ingenieriaInversa/ejemplos check
 ```
 
 Requiere GCC, binutils, Make y Python 3.8 o posterior. Construye tres variantes del
@@ -50,9 +50,10 @@ los bytes almacenados en dos binarios y ejecuta ocho controles con entradas de
 también el banco x86 necesario para esta comprobación, sin modificar sus fuentes.
 
 ```bash
-python3 temas/ejemplos/entropia.py temas/ejemplos/salida/config-strip --window 4096
+python3 Temas/ingenieriaInversa/ejemplos/entropia.py \
+  Temas/ingenieriaInversa/ejemplos/salida/config-strip --window 4096
 make -C muestras/build x86 antidebug
-python3 temas/ejemplos/verificar_gdb.py
+python3 Temas/ingenieriaInversa/ejemplos/verificar_gdb.py
 ```
 
 La última orden necesita GDB y permiso del sistema para `ptrace`: verifica siete

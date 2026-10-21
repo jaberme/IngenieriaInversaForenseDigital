@@ -13,6 +13,7 @@ import subprocess
 
 RAIZ = Path(__file__).resolve().parents[2]
 LAB = Path(__file__).resolve().parent
+PRACTICA = RAIZ / "Practicas/IngenieriaInversa/P1-c-a-asm"
 
 
 def sha256(ruta):
@@ -29,18 +30,19 @@ def main():
     for nombre in ("gcc", "make", "objdump", "readelf", "file"):
         if not shutil.which(nombre):
             parser.error(f"Falta la herramienta {nombre}")
+    fuentes = [RAIZ / "muestras/build/ejemplos.c", RAIZ / "muestras/build/Makefile",
+               LAB / "controles.c", Path(__file__).resolve(),
+               PRACTICA / "Practica1.pdf", PRACTICA / "solucion.pdf"]
+    ausentes = [ruta for ruta in fuentes if not ruta.is_file()]
+    if ausentes:
+        parser.error("Faltan entradas de P1: " +
+                     ", ".join(str(ruta.relative_to(RAIZ)) for ruta in ausentes))
     inicio = datetime.now(timezone.utc)
     salida = (args.salida or RAIZ / "build/laboratorios/P1" /
               inicio.strftime("%Y%m%dT%H%M%S%fZ")).resolve()
     salida.mkdir(parents=True, exist_ok=False)
     (salida / "binarios").mkdir()
     env = dict(os.environ, LC_ALL="C", TZ="UTC")
-    fuentes = [RAIZ / "muestras/build/ejemplos.c", RAIZ / "muestras/build/Makefile",
-               LAB / "controles.c", Path(__file__).resolve()]
-    fuentes += sorted((RAIZ / "practicas/P1-c-a-asm").glob("*.md"))
-    fuentes += sorted((RAIZ / "practicas/P1-c-a-asm").glob("*.tex"))
-    fuentes += [RAIZ / "practicas/P1-c-a-asm" / nombre
-                for nombre in ("Practica1.pdf", "SolucionP1.pdf")]
     entradas = {str(p.relative_to(RAIZ)): sha256(p) for p in fuentes}
     registro = {"inicio_utc": inicio.isoformat(), "raiz": str(RAIZ),
                 "plataforma": platform.platform(), "maquina": platform.machine(),
